@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainDUdDyI.ui'
+## Form generated from reading UI file 'mainetfhPV.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -16,13 +16,14 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QCheckBox,
-    QComboBox, QCommandLinkButton, QFormLayout, QFrame,
-    QGridLayout, QHBoxLayout, QHeaderView, QLabel,
-    QLineEdit, QMainWindow, QPlainTextEdit, QProgressBar,
-    QPushButton, QRadioButton, QScrollArea, QScrollBar,
-    QSizePolicy, QSlider, QStackedWidget, QTableWidget,
-    QTableWidgetItem, QTextEdit, QVBoxLayout, QWidget)
+    QComboBox, QCommandLinkButton, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QPlainTextEdit, QProgressBar, QPushButton,
+    QRadioButton, QScrollArea, QScrollBar, QSizePolicy,
+    QSlider, QStackedWidget, QTableWidget, QTableWidgetItem,
+    QTextEdit, QVBoxLayout, QWidget)
 from . resources_rc import *
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -1191,7 +1192,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 351, 218))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 342, 218))
         self.scrollAreaWidgetContents.setStyleSheet(u" QScrollBar:vertical {\n"
 "	border: none;\n"
 "    background: rgb(52, 59, 72);\n"
@@ -1394,99 +1395,6 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.widgets)
         self.new_page = QWidget()
         self.new_page.setObjectName(u"new_page")
-        self.rezervuar1 = QFrame(self.new_page)
-        self.rezervuar1.setObjectName(u"rezervuar1")
-        self.rezervuar1.setGeometry(QRect(0, 0, 238, 162))
-        self.rezervuar1.setStyleSheet(u"QFrame {\n"
-"	background-color: rgb(13, 9, 36);\n"
-"	border: none;\n"
-"	border-radius: 12px;\n"
-"}")
-        self.rezervuar1.setFrameShape(QFrame.Shape.NoFrame)
-        self.rezervuar1.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_20 = QVBoxLayout(self.rezervuar1)
-        self.verticalLayout_20.setSpacing(5)
-        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
-        self.frame_26 = QFrame(self.rezervuar1)
-        self.frame_26.setObjectName(u"frame_26")
-        self.frame_26.setMinimumSize(QSize(0, 30))
-        self.frame_26.setMaximumSize(QSize(16777215, 30))
-        self.frame_26.setStyleSheet(u"")
-        self.frame_26.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_26.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_14 = QHBoxLayout(self.frame_26)
-        self.horizontalLayout_14.setSpacing(0)
-        self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
-        self.horizontalLayout_14.setContentsMargins(0, 0, 10, 0)
-        self.label_14 = QLabel(self.frame_26)
-        self.label_14.setObjectName(u"label_14")
-        self.label_14.setMinimumSize(QSize(180, 0))
-        self.label_14.setMaximumSize(QSize(16777215, 16777215))
-        font5 = QFont()
-        font5.setFamilies([u"Segoe UI"])
-        font5.setPointSize(16)
-        font5.setWeight(QFont.Black)
-        font5.setItalic(False)
-        self.label_14.setFont(font5)
-        self.label_14.setStyleSheet(u"color: rgb(170, 170, 170);\n"
-"font: 900 16pt \"Segoe UI\";\n"
-"  margin-left: 50;\n"
-"  margin-right: auto;")
-
-        self.horizontalLayout_14.addWidget(self.label_14)
-
-
-        self.verticalLayout_20.addWidget(self.frame_26)
-
-        self.frame_27 = QFrame(self.rezervuar1)
-        self.frame_27.setObjectName(u"frame_27")
-        self.frame_27.setStyleSheet(u"background-color: rgb(13, 9, 36);")
-        self.frame_27.setFrameShape(QFrame.Shape.Panel)
-        self.frame_27.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_15 = QHBoxLayout(self.frame_27)
-        self.horizontalLayout_15.setSpacing(0)
-        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
-        self.horizontalLayout_15.setContentsMargins(0, 0, 0, 0)
-        self.frame_28 = QFrame(self.frame_27)
-        self.frame_28.setObjectName(u"frame_28")
-        self.frame_28.setStyleSheet(u"")
-        self.frame_28.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_28.setFrameShadow(QFrame.Shadow.Raised)
-        self.formLayout = QFormLayout(self.frame_28)
-        self.formLayout.setObjectName(u"formLayout")
-        self.formLayout.setContentsMargins(10, 20, 10, 20)
-        self.label = QLabel(self.frame_28)
-        self.label.setObjectName(u"label")
-
-        self.formLayout.setWidget(0, QFormLayout.LabelRole, self.label)
-
-        self.label_3 = QLabel(self.frame_28)
-        self.label_3.setObjectName(u"label_3")
-
-        self.formLayout.setWidget(1, QFormLayout.LabelRole, self.label_3)
-
-        self.label_5 = QLabel(self.frame_28)
-        self.label_5.setObjectName(u"label_5")
-
-        self.formLayout.setWidget(2, QFormLayout.LabelRole, self.label_5)
-
-        self.label_2 = QLabel(self.frame_28)
-        self.label_2.setObjectName(u"label_2")
-
-        self.formLayout.setWidget(3, QFormLayout.LabelRole, self.label_2)
-
-        self.label_4 = QLabel(self.frame_28)
-        self.label_4.setObjectName(u"label_4")
-
-        self.formLayout.setWidget(4, QFormLayout.LabelRole, self.label_4)
-
-
-        self.horizontalLayout_15.addWidget(self.frame_28)
-
-
-        self.verticalLayout_20.addWidget(self.frame_27)
-
         self.rezervuar2 = QFrame(self.new_page)
         self.rezervuar2.setObjectName(u"rezervuar2")
         self.rezervuar2.setGeometry(QRect(330, 0, 272, 271))
@@ -1516,6 +1424,11 @@ class Ui_MainWindow(object):
         self.label_22.setObjectName(u"label_22")
         self.label_22.setMinimumSize(QSize(180, 0))
         self.label_22.setMaximumSize(QSize(16777215, 16777215))
+        font5 = QFont()
+        font5.setFamilies([u"Segoe UI"])
+        font5.setPointSize(16)
+        font5.setWeight(QFont.Black)
+        font5.setItalic(False)
         self.label_22.setFont(font5)
         self.label_22.setStyleSheet(u"color: rgb(170, 170, 170);\n"
 "font: 900 16pt \"Segoe UI\";\n"
@@ -1541,78 +1454,33 @@ class Ui_MainWindow(object):
         self.frame_36.setStyleSheet(u"")
         self.frame_36.setFrameShape(QFrame.Shape.NoFrame)
         self.frame_36.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_27 = QVBoxLayout(self.frame_36)
-        self.verticalLayout_27.setSpacing(0)
-        self.verticalLayout_27.setObjectName(u"verticalLayout_27")
-        self.verticalLayout_27.setContentsMargins(10, 20, 10, 20)
-        self.label_23 = QLabel(self.frame_36)
-        self.label_23.setObjectName(u"label_23")
-        self.label_23.setMaximumSize(QSize(70, 16))
-        self.label_23.setFont(font)
-        self.label_23.setStyleSheet(u"color: rgb(0, 170, 0);\n"
-"background-color: rgb(0, 0, 0);\n"
-"padding: 1px;\n"
-"border-radius: 8px;")
-
-        self.verticalLayout_27.addWidget(self.label_23, 0, Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-
         self.progressBar_5 = QProgressBar(self.frame_36)
         self.progressBar_5.setObjectName(u"progressBar_5")
-        self.progressBar_5.setMinimumSize(QSize(0, 16))
+        self.progressBar_5.setGeometry(QRect(10, 80, 71, 100))
+        self.progressBar_5.setMinimumSize(QSize(0, 100))
         self.progressBar_5.setMaximumSize(QSize(16777215, 16))
         self.progressBar_5.setFont(font)
         self.progressBar_5.setAutoFillBackground(False)
         self.progressBar_5.setStyleSheet(u"QProgressBar {\n"
-"	color: rgb(177, 177, 177);\n"
-"	border: none;\n"
-"	background-color: rgb(102, 102, 102);\n"
-"	border-radius: 8px;\n"
+"    color: rgb(177, 177, 177);\n"
+"    border: none;\n"
+"    background-color: rgb(102, 102, 102);\n"
+"    border-radius: 4px;\n"
+"    height: 100px; /* \u041c\u043e\u0436\u043d\u043e \u0438\u0437\u043c\u0435\u043d\u0438\u0442\u044c \u043f\u043e \u0436\u0435\u043b\u0430\u043d\u0438\u044e */\n"
+"    min-height: 12px;\n"
 "}\n"
 "\n"
 "QProgressBar::chunk {\n"
-"	background-color: rgb(7, 255, 119);\n"
-"	border-radius : 8px;\n"
-"}     ")
-        self.progressBar_5.setValue(75)
+"    background-color: rgb(194, 214, 95);\n"
+"    border-radius: 4px;\n"
+"}\n"
+"")
+        self.progressBar_5.setValue(0)
         self.progressBar_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.progressBar_5.setTextVisible(False)
-        self.progressBar_5.setOrientation(Qt.Orientation.Horizontal)
+        self.progressBar_5.setOrientation(Qt.Orientation.Vertical)
         self.progressBar_5.setInvertedAppearance(False)
         self.progressBar_5.setTextDirection(QProgressBar.Direction.TopToBottom)
-
-        self.verticalLayout_27.addWidget(self.progressBar_5, 0, Qt.AlignmentFlag.AlignVCenter)
-
-        self.label_24 = QLabel(self.frame_36)
-        self.label_24.setObjectName(u"label_24")
-        self.label_24.setMaximumSize(QSize(70, 16))
-        self.label_24.setStyleSheet(u"color: rgb(0, 0, 255);\n"
-"background-color: rgb(0, 0, 0);\n"
-"padding: 1px;\n"
-"border-radius: 8px;")
-
-        self.verticalLayout_27.addWidget(self.label_24, 0, Qt.AlignmentFlag.AlignVCenter)
-
-        self.progressBar_6 = QProgressBar(self.frame_36)
-        self.progressBar_6.setObjectName(u"progressBar_6")
-        self.progressBar_6.setMinimumSize(QSize(0, 16))
-        self.progressBar_6.setMaximumSize(QSize(16777215, 16))
-        self.progressBar_6.setStyleSheet(u"QProgressBar {\n"
-"	color: rgb(177, 177, 177);\n"
-"	border: none;\n"
-"	background-color: rgb(102, 102, 102);\n"
-"	border-radius: 8px;\n"
-"}\n"
-"\n"
-"QProgressBar::chunk {\n"
-"	background-color: rgb(85, 0, 255);\n"
-"	border-radius : 8px;\n"
-"}     ")
-        self.progressBar_6.setValue(25)
-        self.progressBar_6.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.progressBar_6.setTextVisible(False)
-
-        self.verticalLayout_27.addWidget(self.progressBar_6, 0, Qt.AlignmentFlag.AlignVCenter)
-
 
         self.horizontalLayout_19.addWidget(self.frame_36)
 
@@ -1649,654 +1517,14 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_26.addWidget(self.frame_35)
 
-        self.rezervuar3 = QFrame(self.new_page)
-        self.rezervuar3.setObjectName(u"rezervuar3")
-        self.rezervuar3.setGeometry(QRect(650, 0, 272, 271))
-        self.rezervuar3.setStyleSheet(u"QFrame {\n"
-"	background-color: rgb(13, 9, 36);\n"
-"	border: none;\n"
-"	border-radius: 12px;\n"
-"}")
-        self.rezervuar3.setFrameShape(QFrame.Shape.NoFrame)
-        self.rezervuar3.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_32 = QVBoxLayout(self.rezervuar3)
-        self.verticalLayout_32.setSpacing(5)
-        self.verticalLayout_32.setObjectName(u"verticalLayout_32")
-        self.verticalLayout_32.setContentsMargins(0, 0, 0, 0)
-        self.frame_42 = QFrame(self.rezervuar3)
-        self.frame_42.setObjectName(u"frame_42")
-        self.frame_42.setMinimumSize(QSize(0, 30))
-        self.frame_42.setMaximumSize(QSize(16777215, 30))
-        self.frame_42.setStyleSheet(u"")
-        self.frame_42.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_42.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_22 = QHBoxLayout(self.frame_42)
-        self.horizontalLayout_22.setSpacing(0)
-        self.horizontalLayout_22.setObjectName(u"horizontalLayout_22")
-        self.horizontalLayout_22.setContentsMargins(0, 0, 10, 0)
-        self.label_34 = QLabel(self.frame_42)
-        self.label_34.setObjectName(u"label_34")
-        self.label_34.setMinimumSize(QSize(180, 0))
-        self.label_34.setMaximumSize(QSize(16777215, 16777215))
-        self.label_34.setFont(font5)
-        self.label_34.setStyleSheet(u"color: rgb(170, 170, 170);\n"
-"font: 900 16pt \"Segoe UI\";\n"
-"  margin-left: 50;\n"
-"  margin-right: auto;")
-
-        self.horizontalLayout_22.addWidget(self.label_34)
-
-
-        self.verticalLayout_32.addWidget(self.frame_42)
-
-        self.frame_43 = QFrame(self.rezervuar3)
-        self.frame_43.setObjectName(u"frame_43")
-        self.frame_43.setStyleSheet(u"background-color: rgb(13, 9, 36);")
-        self.frame_43.setFrameShape(QFrame.Shape.Panel)
-        self.frame_43.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_23 = QHBoxLayout(self.frame_43)
-        self.horizontalLayout_23.setSpacing(0)
-        self.horizontalLayout_23.setObjectName(u"horizontalLayout_23")
-        self.horizontalLayout_23.setContentsMargins(0, 0, 0, 0)
-        self.frame_44 = QFrame(self.frame_43)
-        self.frame_44.setObjectName(u"frame_44")
-        self.frame_44.setStyleSheet(u"")
-        self.frame_44.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_44.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_33 = QVBoxLayout(self.frame_44)
-        self.verticalLayout_33.setSpacing(0)
-        self.verticalLayout_33.setObjectName(u"verticalLayout_33")
-        self.verticalLayout_33.setContentsMargins(10, 20, 10, 20)
-        self.label_35 = QLabel(self.frame_44)
-        self.label_35.setObjectName(u"label_35")
-        self.label_35.setMaximumSize(QSize(70, 16))
-        self.label_35.setFont(font)
-        self.label_35.setStyleSheet(u"color: rgb(0, 170, 0);\n"
-"background-color: rgb(0, 0, 0);\n"
-"padding: 1px;\n"
-"border-radius: 8px;")
-
-        self.verticalLayout_33.addWidget(self.label_35, 0, Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-
-        self.progressBar_9 = QProgressBar(self.frame_44)
-        self.progressBar_9.setObjectName(u"progressBar_9")
-        self.progressBar_9.setMinimumSize(QSize(0, 16))
-        self.progressBar_9.setMaximumSize(QSize(16777215, 16))
-        self.progressBar_9.setFont(font)
-        self.progressBar_9.setAutoFillBackground(False)
-        self.progressBar_9.setStyleSheet(u"QProgressBar {\n"
-"	color: rgb(177, 177, 177);\n"
-"	border: none;\n"
-"	background-color: rgb(102, 102, 102);\n"
-"	border-radius: 8px;\n"
-"}\n"
-"\n"
-"QProgressBar::chunk {\n"
-"	background-color: rgb(7, 255, 119);\n"
-"	border-radius : 8px;\n"
-"}     ")
-        self.progressBar_9.setValue(75)
-        self.progressBar_9.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.progressBar_9.setTextVisible(False)
-        self.progressBar_9.setOrientation(Qt.Orientation.Horizontal)
-        self.progressBar_9.setInvertedAppearance(False)
-        self.progressBar_9.setTextDirection(QProgressBar.Direction.TopToBottom)
-
-        self.verticalLayout_33.addWidget(self.progressBar_9, 0, Qt.AlignmentFlag.AlignVCenter)
-
-        self.label_36 = QLabel(self.frame_44)
-        self.label_36.setObjectName(u"label_36")
-        self.label_36.setMaximumSize(QSize(70, 16))
-        self.label_36.setStyleSheet(u"color: rgb(0, 0, 255);\n"
-"background-color: rgb(0, 0, 0);\n"
-"padding: 1px;\n"
-"border-radius: 8px;")
-
-        self.verticalLayout_33.addWidget(self.label_36, 0, Qt.AlignmentFlag.AlignVCenter)
-
-        self.progressBar_10 = QProgressBar(self.frame_44)
-        self.progressBar_10.setObjectName(u"progressBar_10")
-        self.progressBar_10.setMinimumSize(QSize(0, 16))
-        self.progressBar_10.setMaximumSize(QSize(16777215, 16))
-        self.progressBar_10.setStyleSheet(u"QProgressBar {\n"
-"	color: rgb(177, 177, 177);\n"
-"	border: none;\n"
-"	background-color: rgb(102, 102, 102);\n"
-"	border-radius: 8px;\n"
-"}\n"
-"\n"
-"QProgressBar::chunk {\n"
-"	background-color: rgb(85, 0, 255);\n"
-"	border-radius : 8px;\n"
-"}     ")
-        self.progressBar_10.setValue(25)
-        self.progressBar_10.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.progressBar_10.setTextVisible(False)
-
-        self.verticalLayout_33.addWidget(self.progressBar_10, 0, Qt.AlignmentFlag.AlignVCenter)
-
-
-        self.horizontalLayout_23.addWidget(self.frame_44)
-
-        self.frame_45 = QFrame(self.frame_43)
-        self.frame_45.setObjectName(u"frame_45")
-        self.frame_45.setMinimumSize(QSize(140, 0))
-        self.frame_45.setMaximumSize(QSize(140, 16777215))
-        self.frame_45.setStyleSheet(u"")
-        self.frame_45.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_45.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_34 = QVBoxLayout(self.frame_45)
-        self.verticalLayout_34.setSpacing(0)
-        self.verticalLayout_34.setObjectName(u"verticalLayout_34")
-        self.verticalLayout_34.setContentsMargins(0, 0, 0, 0)
-        self.label_37 = QLabel(self.frame_45)
-        self.label_37.setObjectName(u"label_37")
-        self.label_37.setFont(font)
-        self.label_37.setStyleSheet(u"color: rgb(159, 159, 159);")
-
-        self.verticalLayout_34.addWidget(self.label_37, 0, Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignBottom)
-
-        self.label_38 = QLabel(self.frame_45)
-        self.label_38.setObjectName(u"label_38")
-        self.label_38.setMinimumSize(QSize(0, 0))
-        self.label_38.setMaximumSize(QSize(120, 16777215))
-        self.label_38.setFont(font)
-        self.label_38.setStyleSheet(u"color: rgb(170, 170, 170);")
-
-        self.verticalLayout_34.addWidget(self.label_38, 0, Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignVCenter)
-
-
-        self.horizontalLayout_23.addWidget(self.frame_45)
-
-
-        self.verticalLayout_32.addWidget(self.frame_43)
-
-        self.rezervuar4 = QFrame(self.new_page)
-        self.rezervuar4.setObjectName(u"rezervuar4")
-        self.rezervuar4.setGeometry(QRect(0, 310, 272, 271))
-        self.rezervuar4.setStyleSheet(u"QFrame {\n"
-"	background-color: rgb(13, 9, 36);\n"
-"	border: none;\n"
-"	border-radius: 12px;\n"
-"}")
-        self.rezervuar4.setFrameShape(QFrame.Shape.NoFrame)
-        self.rezervuar4.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_35 = QVBoxLayout(self.rezervuar4)
-        self.verticalLayout_35.setSpacing(5)
-        self.verticalLayout_35.setObjectName(u"verticalLayout_35")
-        self.verticalLayout_35.setContentsMargins(0, 0, 0, 0)
-        self.frame_46 = QFrame(self.rezervuar4)
-        self.frame_46.setObjectName(u"frame_46")
-        self.frame_46.setMinimumSize(QSize(0, 30))
-        self.frame_46.setMaximumSize(QSize(16777215, 30))
-        self.frame_46.setStyleSheet(u"")
-        self.frame_46.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_46.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_24 = QHBoxLayout(self.frame_46)
-        self.horizontalLayout_24.setSpacing(0)
-        self.horizontalLayout_24.setObjectName(u"horizontalLayout_24")
-        self.horizontalLayout_24.setContentsMargins(0, 0, 10, 0)
-        self.label_39 = QLabel(self.frame_46)
-        self.label_39.setObjectName(u"label_39")
-        self.label_39.setMinimumSize(QSize(180, 0))
-        self.label_39.setMaximumSize(QSize(16777215, 16777215))
-        self.label_39.setFont(font5)
-        self.label_39.setStyleSheet(u"color: rgb(170, 170, 170);\n"
-"font: 900 16pt \"Segoe UI\";\n"
-"  margin-left: 50;\n"
-"  margin-right: auto;")
-
-        self.horizontalLayout_24.addWidget(self.label_39)
-
-
-        self.verticalLayout_35.addWidget(self.frame_46)
-
-        self.frame_47 = QFrame(self.rezervuar4)
-        self.frame_47.setObjectName(u"frame_47")
-        self.frame_47.setStyleSheet(u"background-color: rgb(13, 9, 36);")
-        self.frame_47.setFrameShape(QFrame.Shape.Panel)
-        self.frame_47.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_25 = QHBoxLayout(self.frame_47)
-        self.horizontalLayout_25.setSpacing(0)
-        self.horizontalLayout_25.setObjectName(u"horizontalLayout_25")
-        self.horizontalLayout_25.setContentsMargins(0, 0, 0, 0)
-        self.frame_48 = QFrame(self.frame_47)
-        self.frame_48.setObjectName(u"frame_48")
-        self.frame_48.setStyleSheet(u"")
-        self.frame_48.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_48.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_36 = QVBoxLayout(self.frame_48)
-        self.verticalLayout_36.setSpacing(0)
-        self.verticalLayout_36.setObjectName(u"verticalLayout_36")
-        self.verticalLayout_36.setContentsMargins(10, 20, 10, 20)
-        self.label_40 = QLabel(self.frame_48)
-        self.label_40.setObjectName(u"label_40")
-        self.label_40.setMaximumSize(QSize(70, 16))
-        self.label_40.setFont(font)
-        self.label_40.setStyleSheet(u"color: rgb(0, 170, 0);\n"
-"background-color: rgb(0, 0, 0);\n"
-"padding: 1px;\n"
-"border-radius: 8px;")
-
-        self.verticalLayout_36.addWidget(self.label_40, 0, Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-
-        self.progressBar_11 = QProgressBar(self.frame_48)
-        self.progressBar_11.setObjectName(u"progressBar_11")
-        self.progressBar_11.setMinimumSize(QSize(0, 16))
-        self.progressBar_11.setMaximumSize(QSize(16777215, 16))
-        self.progressBar_11.setFont(font)
-        self.progressBar_11.setAutoFillBackground(False)
-        self.progressBar_11.setStyleSheet(u"QProgressBar {\n"
-"	color: rgb(177, 177, 177);\n"
-"	border: none;\n"
-"	background-color: rgb(102, 102, 102);\n"
-"	border-radius: 8px;\n"
-"}\n"
-"\n"
-"QProgressBar::chunk {\n"
-"	background-color: rgb(7, 255, 119);\n"
-"	border-radius : 8px;\n"
-"}     ")
-        self.progressBar_11.setValue(75)
-        self.progressBar_11.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.progressBar_11.setTextVisible(False)
-        self.progressBar_11.setOrientation(Qt.Orientation.Horizontal)
-        self.progressBar_11.setInvertedAppearance(False)
-        self.progressBar_11.setTextDirection(QProgressBar.Direction.TopToBottom)
-
-        self.verticalLayout_36.addWidget(self.progressBar_11, 0, Qt.AlignmentFlag.AlignVCenter)
-
-        self.label_41 = QLabel(self.frame_48)
-        self.label_41.setObjectName(u"label_41")
-        self.label_41.setMaximumSize(QSize(70, 16))
-        self.label_41.setStyleSheet(u"color: rgb(0, 0, 255);\n"
-"background-color: rgb(0, 0, 0);\n"
-"padding: 1px;\n"
-"border-radius: 8px;")
-
-        self.verticalLayout_36.addWidget(self.label_41, 0, Qt.AlignmentFlag.AlignVCenter)
-
-        self.progressBar_12 = QProgressBar(self.frame_48)
-        self.progressBar_12.setObjectName(u"progressBar_12")
-        self.progressBar_12.setMinimumSize(QSize(0, 16))
-        self.progressBar_12.setMaximumSize(QSize(16777215, 16))
-        self.progressBar_12.setStyleSheet(u"QProgressBar {\n"
-"	color: rgb(177, 177, 177);\n"
-"	border: none;\n"
-"	background-color: rgb(102, 102, 102);\n"
-"	border-radius: 8px;\n"
-"}\n"
-"\n"
-"QProgressBar::chunk {\n"
-"	background-color: rgb(85, 0, 255);\n"
-"	border-radius : 8px;\n"
-"}     ")
-        self.progressBar_12.setValue(25)
-        self.progressBar_12.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.progressBar_12.setTextVisible(False)
-
-        self.verticalLayout_36.addWidget(self.progressBar_12, 0, Qt.AlignmentFlag.AlignVCenter)
-
-
-        self.horizontalLayout_25.addWidget(self.frame_48)
-
-        self.frame_49 = QFrame(self.frame_47)
-        self.frame_49.setObjectName(u"frame_49")
-        self.frame_49.setMinimumSize(QSize(140, 0))
-        self.frame_49.setMaximumSize(QSize(140, 16777215))
-        self.frame_49.setStyleSheet(u"")
-        self.frame_49.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_49.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_37 = QVBoxLayout(self.frame_49)
-        self.verticalLayout_37.setSpacing(0)
-        self.verticalLayout_37.setObjectName(u"verticalLayout_37")
-        self.verticalLayout_37.setContentsMargins(0, 0, 0, 0)
-        self.label_42 = QLabel(self.frame_49)
-        self.label_42.setObjectName(u"label_42")
-        self.label_42.setFont(font)
-        self.label_42.setStyleSheet(u"color: rgb(159, 159, 159);")
-
-        self.verticalLayout_37.addWidget(self.label_42, 0, Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignBottom)
-
-        self.label_43 = QLabel(self.frame_49)
-        self.label_43.setObjectName(u"label_43")
-        self.label_43.setMinimumSize(QSize(0, 0))
-        self.label_43.setMaximumSize(QSize(120, 16777215))
-        self.label_43.setFont(font)
-        self.label_43.setStyleSheet(u"color: rgb(170, 170, 170);")
-
-        self.verticalLayout_37.addWidget(self.label_43, 0, Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignVCenter)
-
-
-        self.horizontalLayout_25.addWidget(self.frame_49)
-
-
-        self.verticalLayout_35.addWidget(self.frame_47)
-
-        self.rezervuar5 = QFrame(self.new_page)
-        self.rezervuar5.setObjectName(u"rezervuar5")
-        self.rezervuar5.setGeometry(QRect(320, 310, 272, 271))
-        self.rezervuar5.setStyleSheet(u"QFrame {\n"
-"	background-color: rgb(13, 9, 36);\n"
-"	border: none;\n"
-"	border-radius: 12px;\n"
-"}")
-        self.rezervuar5.setFrameShape(QFrame.Shape.NoFrame)
-        self.rezervuar5.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_38 = QVBoxLayout(self.rezervuar5)
-        self.verticalLayout_38.setSpacing(5)
-        self.verticalLayout_38.setObjectName(u"verticalLayout_38")
-        self.verticalLayout_38.setContentsMargins(0, 0, 0, 0)
-        self.frame_50 = QFrame(self.rezervuar5)
-        self.frame_50.setObjectName(u"frame_50")
-        self.frame_50.setMinimumSize(QSize(0, 30))
-        self.frame_50.setMaximumSize(QSize(16777215, 30))
-        self.frame_50.setStyleSheet(u"")
-        self.frame_50.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_50.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_26 = QHBoxLayout(self.frame_50)
-        self.horizontalLayout_26.setSpacing(0)
-        self.horizontalLayout_26.setObjectName(u"horizontalLayout_26")
-        self.horizontalLayout_26.setContentsMargins(0, 0, 10, 0)
-        self.label_44 = QLabel(self.frame_50)
-        self.label_44.setObjectName(u"label_44")
-        self.label_44.setMinimumSize(QSize(180, 0))
-        self.label_44.setMaximumSize(QSize(16777215, 16777215))
-        self.label_44.setFont(font5)
-        self.label_44.setStyleSheet(u"color: rgb(170, 170, 170);\n"
-"font: 900 16pt \"Segoe UI\";\n"
-"  margin-left: 50;\n"
-"  margin-right: auto;")
-
-        self.horizontalLayout_26.addWidget(self.label_44)
-
-
-        self.verticalLayout_38.addWidget(self.frame_50)
-
-        self.frame_51 = QFrame(self.rezervuar5)
-        self.frame_51.setObjectName(u"frame_51")
-        self.frame_51.setStyleSheet(u"background-color: rgb(13, 9, 36);")
-        self.frame_51.setFrameShape(QFrame.Shape.Panel)
-        self.frame_51.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_27 = QHBoxLayout(self.frame_51)
-        self.horizontalLayout_27.setSpacing(0)
-        self.horizontalLayout_27.setObjectName(u"horizontalLayout_27")
-        self.horizontalLayout_27.setContentsMargins(0, 0, 0, 0)
-        self.frame_52 = QFrame(self.frame_51)
-        self.frame_52.setObjectName(u"frame_52")
-        self.frame_52.setStyleSheet(u"")
-        self.frame_52.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_52.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_39 = QVBoxLayout(self.frame_52)
-        self.verticalLayout_39.setSpacing(0)
-        self.verticalLayout_39.setObjectName(u"verticalLayout_39")
-        self.verticalLayout_39.setContentsMargins(10, 20, 10, 20)
-        self.label_45 = QLabel(self.frame_52)
-        self.label_45.setObjectName(u"label_45")
-        self.label_45.setMaximumSize(QSize(70, 16))
-        self.label_45.setFont(font)
-        self.label_45.setStyleSheet(u"color: rgb(0, 170, 0);\n"
-"background-color: rgb(0, 0, 0);\n"
-"padding: 1px;\n"
-"border-radius: 8px;")
-
-        self.verticalLayout_39.addWidget(self.label_45, 0, Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-
-        self.progressBar_13 = QProgressBar(self.frame_52)
-        self.progressBar_13.setObjectName(u"progressBar_13")
-        self.progressBar_13.setMinimumSize(QSize(0, 16))
-        self.progressBar_13.setMaximumSize(QSize(16777215, 16))
-        self.progressBar_13.setFont(font)
-        self.progressBar_13.setAutoFillBackground(False)
-        self.progressBar_13.setStyleSheet(u"QProgressBar {\n"
-"	color: rgb(177, 177, 177);\n"
-"	border: none;\n"
-"	background-color: rgb(102, 102, 102);\n"
-"	border-radius: 8px;\n"
-"}\n"
-"\n"
-"QProgressBar::chunk {\n"
-"	background-color: rgb(7, 255, 119);\n"
-"	border-radius : 8px;\n"
-"}     ")
-        self.progressBar_13.setValue(75)
-        self.progressBar_13.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.progressBar_13.setTextVisible(False)
-        self.progressBar_13.setOrientation(Qt.Orientation.Horizontal)
-        self.progressBar_13.setInvertedAppearance(False)
-        self.progressBar_13.setTextDirection(QProgressBar.Direction.TopToBottom)
-
-        self.verticalLayout_39.addWidget(self.progressBar_13, 0, Qt.AlignmentFlag.AlignVCenter)
-
-        self.label_46 = QLabel(self.frame_52)
-        self.label_46.setObjectName(u"label_46")
-        self.label_46.setMaximumSize(QSize(70, 16))
-        self.label_46.setStyleSheet(u"color: rgb(0, 0, 255);\n"
-"background-color: rgb(0, 0, 0);\n"
-"padding: 1px;\n"
-"border-radius: 8px;")
-
-        self.verticalLayout_39.addWidget(self.label_46, 0, Qt.AlignmentFlag.AlignVCenter)
-
-        self.progressBar_14 = QProgressBar(self.frame_52)
-        self.progressBar_14.setObjectName(u"progressBar_14")
-        self.progressBar_14.setMinimumSize(QSize(0, 16))
-        self.progressBar_14.setMaximumSize(QSize(16777215, 16))
-        self.progressBar_14.setStyleSheet(u"QProgressBar {\n"
-"	color: rgb(177, 177, 177);\n"
-"	border: none;\n"
-"	background-color: rgb(102, 102, 102);\n"
-"	border-radius: 8px;\n"
-"}\n"
-"\n"
-"QProgressBar::chunk {\n"
-"	background-color: rgb(85, 0, 255);\n"
-"	border-radius : 8px;\n"
-"}     ")
-        self.progressBar_14.setValue(25)
-        self.progressBar_14.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.progressBar_14.setTextVisible(False)
-
-        self.verticalLayout_39.addWidget(self.progressBar_14, 0, Qt.AlignmentFlag.AlignVCenter)
-
-
-        self.horizontalLayout_27.addWidget(self.frame_52)
-
-        self.frame_53 = QFrame(self.frame_51)
-        self.frame_53.setObjectName(u"frame_53")
-        self.frame_53.setMinimumSize(QSize(140, 0))
-        self.frame_53.setMaximumSize(QSize(140, 16777215))
-        self.frame_53.setStyleSheet(u"")
-        self.frame_53.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_53.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_40 = QVBoxLayout(self.frame_53)
-        self.verticalLayout_40.setSpacing(0)
-        self.verticalLayout_40.setObjectName(u"verticalLayout_40")
-        self.verticalLayout_40.setContentsMargins(0, 0, 0, 0)
-        self.label_47 = QLabel(self.frame_53)
-        self.label_47.setObjectName(u"label_47")
-        self.label_47.setFont(font)
-        self.label_47.setStyleSheet(u"color: rgb(159, 159, 159);")
-
-        self.verticalLayout_40.addWidget(self.label_47, 0, Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignBottom)
-
-        self.label_48 = QLabel(self.frame_53)
-        self.label_48.setObjectName(u"label_48")
-        self.label_48.setMinimumSize(QSize(0, 0))
-        self.label_48.setMaximumSize(QSize(120, 16777215))
-        self.label_48.setFont(font)
-        self.label_48.setStyleSheet(u"color: rgb(170, 170, 170);")
-
-        self.verticalLayout_40.addWidget(self.label_48, 0, Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignVCenter)
-
-
-        self.horizontalLayout_27.addWidget(self.frame_53)
-
-
-        self.verticalLayout_38.addWidget(self.frame_51)
-
-        self.rezervuar6 = QFrame(self.new_page)
-        self.rezervuar6.setObjectName(u"rezervuar6")
-        self.rezervuar6.setGeometry(QRect(660, 310, 272, 271))
-        self.rezervuar6.setStyleSheet(u"QFrame {\n"
-"	background-color: rgb(13, 9, 36);\n"
-"	border: none;\n"
-"	border-radius: 12px;\n"
-"}")
-        self.rezervuar6.setFrameShape(QFrame.Shape.NoFrame)
-        self.rezervuar6.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_44 = QVBoxLayout(self.rezervuar6)
-        self.verticalLayout_44.setSpacing(5)
-        self.verticalLayout_44.setObjectName(u"verticalLayout_44")
-        self.verticalLayout_44.setContentsMargins(0, 0, 0, 0)
-        self.frame_58 = QFrame(self.rezervuar6)
-        self.frame_58.setObjectName(u"frame_58")
-        self.frame_58.setMinimumSize(QSize(0, 30))
-        self.frame_58.setMaximumSize(QSize(16777215, 30))
-        self.frame_58.setStyleSheet(u"")
-        self.frame_58.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_58.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_30 = QHBoxLayout(self.frame_58)
-        self.horizontalLayout_30.setSpacing(0)
-        self.horizontalLayout_30.setObjectName(u"horizontalLayout_30")
-        self.horizontalLayout_30.setContentsMargins(0, 0, 10, 0)
-        self.label_54 = QLabel(self.frame_58)
-        self.label_54.setObjectName(u"label_54")
-        self.label_54.setMinimumSize(QSize(180, 0))
-        self.label_54.setMaximumSize(QSize(16777215, 16777215))
-        self.label_54.setFont(font5)
-        self.label_54.setStyleSheet(u"color: rgb(170, 170, 170);\n"
-"font: 900 16pt \"Segoe UI\";\n"
-"  margin-left: 50;\n"
-"  margin-right: auto;")
-
-        self.horizontalLayout_30.addWidget(self.label_54)
-
-
-        self.verticalLayout_44.addWidget(self.frame_58)
-
-        self.frame_59 = QFrame(self.rezervuar6)
-        self.frame_59.setObjectName(u"frame_59")
-        self.frame_59.setStyleSheet(u"background-color: rgb(13, 9, 36);")
-        self.frame_59.setFrameShape(QFrame.Shape.Panel)
-        self.frame_59.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_31 = QHBoxLayout(self.frame_59)
-        self.horizontalLayout_31.setSpacing(0)
-        self.horizontalLayout_31.setObjectName(u"horizontalLayout_31")
-        self.horizontalLayout_31.setContentsMargins(0, 0, 0, 0)
-        self.frame_60 = QFrame(self.frame_59)
-        self.frame_60.setObjectName(u"frame_60")
-        self.frame_60.setStyleSheet(u"")
-        self.frame_60.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_60.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_45 = QVBoxLayout(self.frame_60)
-        self.verticalLayout_45.setSpacing(0)
-        self.verticalLayout_45.setObjectName(u"verticalLayout_45")
-        self.verticalLayout_45.setContentsMargins(10, 20, 10, 20)
-        self.label_55 = QLabel(self.frame_60)
-        self.label_55.setObjectName(u"label_55")
-        self.label_55.setMaximumSize(QSize(70, 16))
-        self.label_55.setFont(font)
-        self.label_55.setStyleSheet(u"color: rgb(0, 170, 0);\n"
-"background-color: rgb(0, 0, 0);\n"
-"padding: 1px;\n"
-"border-radius: 8px;")
-
-        self.verticalLayout_45.addWidget(self.label_55, 0, Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-
-        self.progressBar_17 = QProgressBar(self.frame_60)
-        self.progressBar_17.setObjectName(u"progressBar_17")
-        self.progressBar_17.setMinimumSize(QSize(0, 16))
-        self.progressBar_17.setMaximumSize(QSize(16777215, 16))
-        self.progressBar_17.setFont(font)
-        self.progressBar_17.setAutoFillBackground(False)
-        self.progressBar_17.setStyleSheet(u"QProgressBar {\n"
-"	color: rgb(177, 177, 177);\n"
-"	border: none;\n"
-"	background-color: rgb(102, 102, 102);\n"
-"	border-radius: 8px;\n"
-"}\n"
-"\n"
-"QProgressBar::chunk {\n"
-"	background-color: rgb(7, 255, 119);\n"
-"	border-radius : 8px;\n"
-"}     ")
-        self.progressBar_17.setValue(75)
-        self.progressBar_17.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.progressBar_17.setTextVisible(False)
-        self.progressBar_17.setOrientation(Qt.Orientation.Horizontal)
-        self.progressBar_17.setInvertedAppearance(False)
-        self.progressBar_17.setTextDirection(QProgressBar.Direction.TopToBottom)
-
-        self.verticalLayout_45.addWidget(self.progressBar_17, 0, Qt.AlignmentFlag.AlignVCenter)
-
-        self.label_56 = QLabel(self.frame_60)
-        self.label_56.setObjectName(u"label_56")
-        self.label_56.setMaximumSize(QSize(70, 16))
-        self.label_56.setStyleSheet(u"color: rgb(0, 0, 255);\n"
-"background-color: rgb(0, 0, 0);\n"
-"padding: 1px;\n"
-"border-radius: 8px;")
-
-        self.verticalLayout_45.addWidget(self.label_56, 0, Qt.AlignmentFlag.AlignVCenter)
-
-        self.progressBar_18 = QProgressBar(self.frame_60)
-        self.progressBar_18.setObjectName(u"progressBar_18")
-        self.progressBar_18.setMinimumSize(QSize(0, 16))
-        self.progressBar_18.setMaximumSize(QSize(16777215, 16))
-        self.progressBar_18.setStyleSheet(u"QProgressBar {\n"
-"	color: rgb(177, 177, 177);\n"
-"	border: none;\n"
-"	background-color: rgb(102, 102, 102);\n"
-"	border-radius: 8px;\n"
-"}\n"
-"\n"
-"QProgressBar::chunk {\n"
-"	background-color: rgb(85, 0, 255);\n"
-"	border-radius : 8px;\n"
-"}     ")
-        self.progressBar_18.setValue(25)
-        self.progressBar_18.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.progressBar_18.setTextVisible(False)
-
-        self.verticalLayout_45.addWidget(self.progressBar_18, 0, Qt.AlignmentFlag.AlignVCenter)
-
-
-        self.horizontalLayout_31.addWidget(self.frame_60)
-
-        self.frame_61 = QFrame(self.frame_59)
-        self.frame_61.setObjectName(u"frame_61")
-        self.frame_61.setMinimumSize(QSize(140, 0))
-        self.frame_61.setMaximumSize(QSize(140, 16777215))
-        self.frame_61.setStyleSheet(u"")
-        self.frame_61.setFrameShape(QFrame.Shape.NoFrame)
-        self.frame_61.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_46 = QVBoxLayout(self.frame_61)
-        self.verticalLayout_46.setSpacing(0)
-        self.verticalLayout_46.setObjectName(u"verticalLayout_46")
-        self.verticalLayout_46.setContentsMargins(0, 0, 0, 0)
-        self.label_57 = QLabel(self.frame_61)
-        self.label_57.setObjectName(u"label_57")
-        self.label_57.setFont(font)
-        self.label_57.setStyleSheet(u"color: rgb(159, 159, 159);")
-
-        self.verticalLayout_46.addWidget(self.label_57, 0, Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignBottom)
-
-        self.label_58 = QLabel(self.frame_61)
-        self.label_58.setObjectName(u"label_58")
-        self.label_58.setMinimumSize(QSize(0, 0))
-        self.label_58.setMaximumSize(QSize(120, 16777215))
-        self.label_58.setFont(font)
-        self.label_58.setStyleSheet(u"color: rgb(170, 170, 170);")
-
-        self.verticalLayout_46.addWidget(self.label_58, 0, Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignVCenter)
-
-
-        self.horizontalLayout_31.addWidget(self.frame_61)
-
-
-        self.verticalLayout_44.addWidget(self.frame_59)
-
+        self.rezervuar2_scrollbar = QScrollBar(self.new_page)
+        self.rezervuar2_scrollbar.setObjectName(u"rezervuar2_scrollbar")
+        self.rezervuar2_scrollbar.setGeometry(QRect(290, 280, 371, 21))
+        sizePolicy.setHeightForWidth(self.rezervuar2_scrollbar.sizePolicy().hasHeightForWidth())
+        self.rezervuar2_scrollbar.setSizePolicy(sizePolicy)
+        self.rezervuar2_scrollbar.setStyleSheet(u" QScrollBar:vertical { background: rgb(52, 59, 72); }\n"
+" QScrollBar:horizontal { background: rgb(52, 59, 72); }")
+        self.rezervuar2_scrollbar.setOrientation(Qt.Orientation.Horizontal)
         self.stackedWidget.addWidget(self.new_page)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)
@@ -2438,8 +1666,9 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.styleSheet)
 
         self.retranslateUi(MainWindow)
+        self.rezervuar2_scrollbar.valueChanged.connect(self.progressBar_5.setValue)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2563,37 +1792,9 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"Line", None));
         self.tableWidget.setSortingEnabled(__sortingEnabled)
 
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440 1", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_22.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440 2", None))
-        self.label_23.setText(QCoreApplication.translate("MainWindow", u" Savings", None))
-        self.label_24.setText(QCoreApplication.translate("MainWindow", u"  SPendings", None))
         self.label_25.setText(QCoreApplication.translate("MainWindow", u"$ 25, 500.00", None))
         self.label_29.setText(QCoreApplication.translate("MainWindow", u"\u2714Spending Rate", None))
-        self.label_34.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440 3", None))
-        self.label_35.setText(QCoreApplication.translate("MainWindow", u" Savings", None))
-        self.label_36.setText(QCoreApplication.translate("MainWindow", u"  SPendings", None))
-        self.label_37.setText(QCoreApplication.translate("MainWindow", u"$ 25, 500.00", None))
-        self.label_38.setText(QCoreApplication.translate("MainWindow", u"\u2714Spending Rate", None))
-        self.label_39.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440 4", None))
-        self.label_40.setText(QCoreApplication.translate("MainWindow", u" Savings", None))
-        self.label_41.setText(QCoreApplication.translate("MainWindow", u"  SPendings", None))
-        self.label_42.setText(QCoreApplication.translate("MainWindow", u"$ 25, 500.00", None))
-        self.label_43.setText(QCoreApplication.translate("MainWindow", u"\u2714Spending Rate", None))
-        self.label_44.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440 5", None))
-        self.label_45.setText(QCoreApplication.translate("MainWindow", u" Savings", None))
-        self.label_46.setText(QCoreApplication.translate("MainWindow", u"  SPendings", None))
-        self.label_47.setText(QCoreApplication.translate("MainWindow", u"$ 25, 500.00", None))
-        self.label_48.setText(QCoreApplication.translate("MainWindow", u"\u2714Spending Rate", None))
-        self.label_54.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440 6", None))
-        self.label_55.setText(QCoreApplication.translate("MainWindow", u" Savings", None))
-        self.label_56.setText(QCoreApplication.translate("MainWindow", u"  SPendings", None))
-        self.label_57.setText(QCoreApplication.translate("MainWindow", u"$ 25, 500.00", None))
-        self.label_58.setText(QCoreApplication.translate("MainWindow", u"\u2714Spending Rate", None))
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
