@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'maindgFKct.ui'
+## Form generated from reading UI file 'mainCNgUrn.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -1123,7 +1123,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 274, 218))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 353, 218))
         self.scrollAreaWidgetContents.setStyleSheet(u" QScrollBar:vertical {\n"
 "	border: none;\n"
 "    background: rgb(52, 59, 72);\n"
@@ -1407,6 +1407,7 @@ class Ui_MainWindow(object):
         self.rezervuar1_scrollbar.setSizePolicy(sizePolicy)
         self.rezervuar1_scrollbar.setStyleSheet(u" QScrollBar:vertical { background: rgb(52, 59, 72); }\n"
 " QScrollBar:horizontal { background: rgb(52, 59, 72); }")
+        self.rezervuar1_scrollbar.setMaximum(100)
         self.rezervuar1_scrollbar.setOrientation(Qt.Orientation.Horizontal)
         self.progressBar_rezervuar1 = QProgressBar(self.new_page)
         self.progressBar_rezervuar1.setObjectName(u"progressBar_rezervuar1")
@@ -1425,7 +1426,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QProgressBar::chunk {\n"
-"    background-color: rgb(194, 214, 95);\n"
+"    background-color: rgb(255, 0, 0);\n"
 "    border-radius: 4px;\n"
 "}\n"
 "")
@@ -1603,6 +1604,9 @@ class Ui_MainWindow(object):
         self.label_2 = QLabel(self.frame_39)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(10, -20, 131, 181))
+        self.label_11 = QLabel(self.frame_39)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setGeometry(QRect(300, 0, 49, 141))
 
         self.horizontalLayout_21.addWidget(self.frame_39)
 
@@ -1612,6 +1616,232 @@ class Ui_MainWindow(object):
         self.label_4 = QLabel(self.new_page)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setGeometry(QRect(60, 430, 91, 161))
+        self.rezervuar1_3 = QFrame(self.new_page)
+        self.rezervuar1_3.setObjectName(u"rezervuar1_3")
+        self.rezervuar1_3.setGeometry(QRect(400, 0, 361, 181))
+        self.rezervuar1_3.setStyleSheet(u"QFrame {\n"
+"	background-color: rgb(13, 9, 36);\n"
+"	border: none;\n"
+"	border-radius: 12px;\n"
+"}")
+        self.rezervuar1_3.setFrameShape(QFrame.Shape.NoFrame)
+        self.rezervuar1_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.verticalLayout_28 = QVBoxLayout(self.rezervuar1_3)
+        self.verticalLayout_28.setSpacing(5)
+        self.verticalLayout_28.setObjectName(u"verticalLayout_28")
+        self.verticalLayout_28.setContentsMargins(0, 0, 0, 0)
+        self.frame_40 = QFrame(self.rezervuar1_3)
+        self.frame_40.setObjectName(u"frame_40")
+        self.frame_40.setMinimumSize(QSize(0, 30))
+        self.frame_40.setMaximumSize(QSize(16777215, 30))
+        self.frame_40.setStyleSheet(u"")
+        self.frame_40.setFrameShape(QFrame.Shape.NoFrame)
+        self.frame_40.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_22 = QHBoxLayout(self.frame_40)
+        self.horizontalLayout_22.setSpacing(0)
+        self.horizontalLayout_22.setObjectName(u"horizontalLayout_22")
+        self.horizontalLayout_22.setContentsMargins(0, 0, 10, 0)
+        self.label_24 = QLabel(self.frame_40)
+        self.label_24.setObjectName(u"label_24")
+        self.label_24.setMinimumSize(QSize(211, 0))
+        self.label_24.setMaximumSize(QSize(16777215, 16777215))
+        self.label_24.setFont(font5)
+        self.label_24.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.label_24.setStyleSheet(u"color: rgb(170, 170, 170);\n"
+"font: 900 16pt \"Segoe UI\";\n"
+"  margin-left: auto;\n"
+"  margin-right: auto;")
+        self.label_24.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_24.setMargin(-9)
+
+        self.horizontalLayout_22.addWidget(self.label_24)
+
+
+        self.verticalLayout_28.addWidget(self.frame_40)
+
+        self.frame_41 = QFrame(self.rezervuar1_3)
+        self.frame_41.setObjectName(u"frame_41")
+        self.frame_41.setStyleSheet(u"background-color: rgb(13, 9, 36);")
+        self.frame_41.setFrameShape(QFrame.Shape.Panel)
+        self.frame_41.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_23 = QHBoxLayout(self.frame_41)
+        self.horizontalLayout_23.setSpacing(0)
+        self.horizontalLayout_23.setObjectName(u"horizontalLayout_23")
+        self.horizontalLayout_23.setContentsMargins(0, 0, 0, 0)
+        self.frame_42 = QFrame(self.frame_41)
+        self.frame_42.setObjectName(u"frame_42")
+        self.frame_42.setStyleSheet(u"")
+        self.frame_42.setFrameShape(QFrame.Shape.NoFrame)
+        self.frame_42.setFrameShadow(QFrame.Shadow.Raised)
+        self.label_5 = QLabel(self.frame_42)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setGeometry(QRect(10, -20, 131, 181))
+        self.label_6 = QLabel(self.frame_42)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setGeometry(QRect(300, 0, 49, 141))
+
+        self.horizontalLayout_23.addWidget(self.frame_42)
+
+
+        self.verticalLayout_28.addWidget(self.frame_41)
+
+        self.rezervuar1_4 = QFrame(self.new_page)
+        self.rezervuar1_4.setObjectName(u"rezervuar1_4")
+        self.rezervuar1_4.setGeometry(QRect(800, 0, 361, 181))
+        self.rezervuar1_4.setStyleSheet(u"QFrame {\n"
+"	background-color: rgb(13, 9, 36);\n"
+"	border: none;\n"
+"	border-radius: 12px;\n"
+"}")
+        self.rezervuar1_4.setFrameShape(QFrame.Shape.NoFrame)
+        self.rezervuar1_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.verticalLayout_29 = QVBoxLayout(self.rezervuar1_4)
+        self.verticalLayout_29.setSpacing(5)
+        self.verticalLayout_29.setObjectName(u"verticalLayout_29")
+        self.verticalLayout_29.setContentsMargins(0, 0, 0, 0)
+        self.frame_43 = QFrame(self.rezervuar1_4)
+        self.frame_43.setObjectName(u"frame_43")
+        self.frame_43.setMinimumSize(QSize(0, 30))
+        self.frame_43.setMaximumSize(QSize(16777215, 30))
+        self.frame_43.setStyleSheet(u"")
+        self.frame_43.setFrameShape(QFrame.Shape.NoFrame)
+        self.frame_43.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_24 = QHBoxLayout(self.frame_43)
+        self.horizontalLayout_24.setSpacing(0)
+        self.horizontalLayout_24.setObjectName(u"horizontalLayout_24")
+        self.horizontalLayout_24.setContentsMargins(0, 0, 10, 0)
+        self.label_25 = QLabel(self.frame_43)
+        self.label_25.setObjectName(u"label_25")
+        self.label_25.setMinimumSize(QSize(211, 0))
+        self.label_25.setMaximumSize(QSize(16777215, 16777215))
+        self.label_25.setFont(font5)
+        self.label_25.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.label_25.setStyleSheet(u"color: rgb(170, 170, 170);\n"
+"font: 900 16pt \"Segoe UI\";\n"
+"  margin-left: auto;\n"
+"  margin-right: auto;")
+        self.label_25.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_25.setMargin(-9)
+
+        self.horizontalLayout_24.addWidget(self.label_25)
+
+
+        self.verticalLayout_29.addWidget(self.frame_43)
+
+        self.frame_44 = QFrame(self.rezervuar1_4)
+        self.frame_44.setObjectName(u"frame_44")
+        self.frame_44.setStyleSheet(u"background-color: rgb(13, 9, 36);")
+        self.frame_44.setFrameShape(QFrame.Shape.Panel)
+        self.frame_44.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_25 = QHBoxLayout(self.frame_44)
+        self.horizontalLayout_25.setSpacing(0)
+        self.horizontalLayout_25.setObjectName(u"horizontalLayout_25")
+        self.horizontalLayout_25.setContentsMargins(0, 0, 0, 0)
+        self.frame_45 = QFrame(self.frame_44)
+        self.frame_45.setObjectName(u"frame_45")
+        self.frame_45.setStyleSheet(u"")
+        self.frame_45.setFrameShape(QFrame.Shape.NoFrame)
+        self.frame_45.setFrameShadow(QFrame.Shadow.Raised)
+        self.label_7 = QLabel(self.frame_45)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setGeometry(QRect(10, -20, 131, 181))
+        self.label_8 = QLabel(self.frame_45)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setGeometry(QRect(300, 0, 49, 141))
+
+        self.horizontalLayout_25.addWidget(self.frame_45)
+
+
+        self.verticalLayout_29.addWidget(self.frame_44)
+
+        self.rezervuar1_5 = QFrame(self.new_page)
+        self.rezervuar1_5.setObjectName(u"rezervuar1_5")
+        self.rezervuar1_5.setGeometry(QRect(800, 190, 361, 181))
+        self.rezervuar1_5.setStyleSheet(u"QFrame {\n"
+"	background-color: rgb(13, 9, 36);\n"
+"	border: none;\n"
+"	border-radius: 12px;\n"
+"}")
+        self.rezervuar1_5.setFrameShape(QFrame.Shape.NoFrame)
+        self.rezervuar1_5.setFrameShadow(QFrame.Shadow.Raised)
+        self.verticalLayout_30 = QVBoxLayout(self.rezervuar1_5)
+        self.verticalLayout_30.setSpacing(5)
+        self.verticalLayout_30.setObjectName(u"verticalLayout_30")
+        self.verticalLayout_30.setContentsMargins(0, 0, 0, 0)
+        self.frame_46 = QFrame(self.rezervuar1_5)
+        self.frame_46.setObjectName(u"frame_46")
+        self.frame_46.setMinimumSize(QSize(0, 30))
+        self.frame_46.setMaximumSize(QSize(16777215, 30))
+        self.frame_46.setStyleSheet(u"")
+        self.frame_46.setFrameShape(QFrame.Shape.NoFrame)
+        self.frame_46.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_26 = QHBoxLayout(self.frame_46)
+        self.horizontalLayout_26.setSpacing(0)
+        self.horizontalLayout_26.setObjectName(u"horizontalLayout_26")
+        self.horizontalLayout_26.setContentsMargins(0, 0, 10, 0)
+        self.label_26 = QLabel(self.frame_46)
+        self.label_26.setObjectName(u"label_26")
+        self.label_26.setMinimumSize(QSize(211, 0))
+        self.label_26.setMaximumSize(QSize(16777215, 16777215))
+        self.label_26.setFont(font5)
+        self.label_26.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.label_26.setStyleSheet(u"color: rgb(170, 170, 170);\n"
+"font: 900 16pt \"Segoe UI\";\n"
+"  margin-left: auto;\n"
+"  margin-right: auto;")
+        self.label_26.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_26.setMargin(-9)
+
+        self.horizontalLayout_26.addWidget(self.label_26)
+
+
+        self.verticalLayout_30.addWidget(self.frame_46)
+
+        self.frame_47 = QFrame(self.rezervuar1_5)
+        self.frame_47.setObjectName(u"frame_47")
+        self.frame_47.setStyleSheet(u"background-color: rgb(13, 9, 36);")
+        self.frame_47.setFrameShape(QFrame.Shape.Panel)
+        self.frame_47.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_27 = QHBoxLayout(self.frame_47)
+        self.horizontalLayout_27.setSpacing(0)
+        self.horizontalLayout_27.setObjectName(u"horizontalLayout_27")
+        self.horizontalLayout_27.setContentsMargins(0, 0, 0, 0)
+        self.frame_48 = QFrame(self.frame_47)
+        self.frame_48.setObjectName(u"frame_48")
+        self.frame_48.setStyleSheet(u"")
+        self.frame_48.setFrameShape(QFrame.Shape.NoFrame)
+        self.frame_48.setFrameShadow(QFrame.Shadow.Raised)
+        self.label_9 = QLabel(self.frame_48)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setGeometry(QRect(10, -20, 131, 181))
+        self.label_10 = QLabel(self.frame_48)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(300, 0, 49, 141))
+
+        self.horizontalLayout_27.addWidget(self.frame_48)
+
+
+        self.verticalLayout_30.addWidget(self.frame_47)
+
+        self.label_12 = QLabel(self.new_page)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setGeometry(QRect(300, 430, 91, 161))
+        self.label_13 = QLabel(self.new_page)
+        self.label_13.setObjectName(u"label_13")
+        self.label_13.setGeometry(QRect(540, 430, 91, 161))
+        self.label_14 = QLabel(self.new_page)
+        self.label_14.setObjectName(u"label_14")
+        self.label_14.setGeometry(QRect(780, 430, 91, 161))
+        self.label_15 = QLabel(self.new_page)
+        self.label_15.setObjectName(u"label_15")
+        self.label_15.setGeometry(QRect(1020, 430, 91, 161))
+        self.testlabel = QLabel(self.new_page)
+        self.testlabel.setObjectName(u"testlabel")
+        self.testlabel.setGeometry(QRect(100, 420, 21, 16))
+        self.dtradiobutton = QRadioButton(self.new_page)
+        self.dtradiobutton.setObjectName(u"dtradiobutton")
+        self.dtradiobutton.setGeometry(QRect(390, 310, 98, 21))
+        self.dtradiobutton.setStyleSheet(u"")
         self.stackedWidget.addWidget(self.new_page)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)
@@ -1730,6 +1960,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.rezervuar1_scrollbar.valueChanged.connect(self.progressBar_rezervuar1.setValue)
+        self.progressBar_rezervuar1.valueChanged.connect(self.testlabel.setNum)
 
         self.stackedWidget.setCurrentIndex(2)
 
@@ -1852,8 +2083,23 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\">1</p><p align=\"right\">2</p><p align=\"right\">3</p><p align=\"right\">4</p><p align=\"right\">5</p></body></html>", None))
         self.label_23.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440 2", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0423\u0440\u043e\u0432\u0435\u043d\u044c, \u043c\u043c</p><p>\u0422\u043e\u043f\u043b\u0438\u0432\u043e \u043a \u0434\u043e\u043f\u0443\u0441\u043a\u0443, \u043b</p><p>\u0422\u043e\u043f\u043b\u0438\u0432\u043e \u043a \u043f\u0440\u0438\u0435\u043c\u0443, \u043b</p><p>\u041f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u044c, \u043a\u0433/\u043c3</p><p>\u0412\u043e\u0434\u0430, \u043c\u043c</p></body></html>", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head><style>p { color: black; font-weight: bold; }</style></head><body><p align=\"center\">\u0414\u0422</p><p align=\"center\">------</p><p align=\"center\">00 \u043c\u043c</p><p align=\"center\">00 \u043b</p><p align=\"center\">00 \u043c\u043c</p></body></html>\n"
-"", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\">1</p><p align=\"right\">2</p><p align=\"right\">3</p><p align=\"right\">4</p><p align=\"right\">5</p></body></html>", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">\u0414\u0422</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">------</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">00 \u043c\u043c</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">00 \u043b</span></p></body></html>", None))
+        self.label_24.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440 1", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0423\u0440\u043e\u0432\u0435\u043d\u044c, \u043c\u043c</p><p>\u0422\u043e\u043f\u043b\u0438\u0432\u043e \u043a \u0434\u043e\u043f\u0443\u0441\u043a\u0443, \u043b</p><p>\u0422\u043e\u043f\u043b\u0438\u0432\u043e \u043a \u043f\u0440\u0438\u0435\u043c\u0443, \u043b</p><p>\u041f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u044c, \u043a\u0433/\u043c3</p><p>\u0412\u043e\u0434\u0430, \u043c\u043c</p></body></html>", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\">1</p><p align=\"right\">2</p><p align=\"right\">3</p><p align=\"right\">4</p><p align=\"right\">5</p></body></html>", None))
+        self.label_25.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440 1", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0423\u0440\u043e\u0432\u0435\u043d\u044c, \u043c\u043c</p><p>\u0422\u043e\u043f\u043b\u0438\u0432\u043e \u043a \u0434\u043e\u043f\u0443\u0441\u043a\u0443, \u043b</p><p>\u0422\u043e\u043f\u043b\u0438\u0432\u043e \u043a \u043f\u0440\u0438\u0435\u043c\u0443, \u043b</p><p>\u041f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u044c, \u043a\u0433/\u043c3</p><p>\u0412\u043e\u0434\u0430, \u043c\u043c</p></body></html>", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\">1</p><p align=\"right\">2</p><p align=\"right\">3</p><p align=\"right\">4</p><p align=\"right\">5</p></body></html>", None))
+        self.label_26.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0435\u0440\u0432\u0443\u0430\u0440 1", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0423\u0440\u043e\u0432\u0435\u043d\u044c, \u043c\u043c</p><p>\u0422\u043e\u043f\u043b\u0438\u0432\u043e \u043a \u0434\u043e\u043f\u0443\u0441\u043a\u0443, \u043b</p><p>\u0422\u043e\u043f\u043b\u0438\u0432\u043e \u043a \u043f\u0440\u0438\u0435\u043c\u0443, \u043b</p><p>\u041f\u043b\u043e\u0442\u043d\u043e\u0441\u0442\u044c, \u043a\u0433/\u043c3</p><p>\u0412\u043e\u0434\u0430, \u043c\u043c</p></body></html>", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\">1</p><p align=\"right\">2</p><p align=\"right\">3</p><p align=\"right\">4</p><p align=\"right\">5</p></body></html>", None))
+        self.label_12.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">A-80</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">------</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">00 \u043c\u043c</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">00 \u043b</span></p></body></html>", None))
+        self.label_13.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">\u0410\u0418-92</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">------</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">00 \u043c\u043c</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">00 \u043b</span></p></body></html>", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">\u0410\u0418-95</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">------</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">00 \u043c\u043c</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">00 \u043b</span></p></body></html>", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">\u0410\u0418-98</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">------</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">00 \u043c\u043c</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">00 \u043b</span></p><p align=\"center\"><span style=\" font-weight:700; color:#000000;\">00 \u043c\u043c</span></p></body></html>", None))
+        self.testlabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">0</p></body></html>", None))
+        self.dtradiobutton.setText(QCoreApplication.translate("MainWindow", u"RadioButton", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0439\u0442\u0438", None))
         self.creditsLabel.setText(QCoreApplication.translate("MainWindow", u"By: Nerykery", None))
         self.version.setText(QCoreApplication.translate("MainWindow", u"v1.0.3", None))
