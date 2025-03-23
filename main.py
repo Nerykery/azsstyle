@@ -6,11 +6,14 @@
 import sys
 import os
 import platform
+import re
+import random
 
 # IMPORT / GUI AND MODULES AND WIDGETS
 # ///////////////////////////////////////////////////////////////
 from modules import *
 from widgets import *
+from customprogressbar import CustomProgressBar
 os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
 
 # SET AS GLOBAL WIDGETS
@@ -93,10 +96,32 @@ class MainWindow(QMainWindow):
         widgets.stackedWidget.setCurrentWidget(widgets.home)
         widgets.btn_home.setStyleSheet(UIFunctions.selectMenu(widgets.btn_home.styleSheet()))
 
-        self.ui.progressBar_rezervuar1.valueChanged.connect(self.update_label)
-        self.update_label()
 
-        self.ui.dtradiobutton.toggled.connect(self.get_radio_value)
+        self.ui.testradiobutton.toggled.connect(self.toggle_tanks)
+
+        
+        
+        # Переменные для хранения значений и направлений
+        
+          # True - увеличение, False - уменьшение
+        self.tanks = {
+            "reservuar1": {"progress": self.ui.progressBar_rezervuar1, "label": self.ui.label_dt, "timer": QTimer(self)},
+            "reservuar2": {"progress": self.ui.progressBar_rezervuar2, "label": self.ui.label_a80, "timer": QTimer(self)},
+            "reservuar3": {"progress": self.ui.progressBar_rezervuar3, "label": self.ui.label_ai92, "timer": QTimer(self)},
+            "reservuar4": {"progress": self.ui.progressBar_rezervuar4, "label": self.ui.label_ai95, "timer": QTimer(self)},
+            "reservuar5": {"progress": self.ui.progressBar_rezervuar5, "label": self.ui.label_ai98, "timer": QTimer(self)},
+        }
+        self.ui.progressBar_rezervuar1.valueChanged.connect(lambda: self.update_label("reservuar1"))
+        self.ui.progressBar_rezervuar2.valueChanged.connect(lambda: self.update_label("reservuar2"))
+        self.ui.progressBar_rezervuar3.valueChanged.connect(lambda: self.update_label("reservuar3"))
+        self.ui.progressBar_rezervuar4.valueChanged.connect(lambda: self.update_label("reservuar4"))
+        self.ui.progressBar_rezervuar5.valueChanged.connect(lambda: self.update_label("reservuar5"))
+
+
+        self.tank_values = {key: 0 for key in self.tanks}
+        self.tank_directions = {key: True for key in self.tanks} 
+
+
 
 
 
@@ -155,70 +180,79 @@ class MainWindow(QMainWindow):
             print('Mouse click: RIGHT CLICK')
 
             
-    def get_radio_value(self):
-        """Запускает циклическое изменение progressBar от 0 до 100 и обратно, пока radioButton включен."""
-        if self.ui.dtradiobutton.isChecked():
-            self.progress_value = 0
-            self.increasing = True  # Флаг направления (увеличение)
-            
-            self.ui.progressBar_rezervuar1.setValue(self.progress_value)
+    def toggle_tanks(self):
+        """Запускает или останавливает анимацию всех резервуаров"""
+        if self.ui.testradiobutton.isChecked():
+            for tank_name, tank in self.tanks.items():
+                self.tank_values[tank_name] = 0
+                self.tank_directions[tank_name] = True  # Начинаем с увеличения
 
-            self.timer = QTimer(self)
-            self.timer.timeout.connect(self.cycle_progress)
-            self.timer.start(50)  # Интервал в миллисекундах
+                tank["progress"].setValue(0)
+
+                tank["timer"].timeout.connect(lambda t=tank_name: self.cycle_progress(t))
+                tank["timer"].start(50)  # Интервал обновления
         else:
-            if hasattr(self, "timer"):
-                self.timer.stop()  # Остановка анимации, если radioButton выключен
+            for tank in self.tanks.values():
+                tank["timer"].stop()
 
-    def cycle_progress(self):
-        """Изменяет progressBar от 0 до 100 и обратно по кругу."""
-        if self.ui.dtradiobutton.isChecked():
-            if self.increasing:
-                self.progress_value += 1
-                if self.progress_value >= 100:
-                    self.increasing = False  # Меняем направление
+    def cycle_progress(self, tank_name):
+        """Обновляет progressBar и label для каждого резервуара"""
+        tank = self.tanks[tank_name]
+
+        if self.ui.testradiobutton.isChecked():
+            if self.tank_directions[tank_name]:
+                self.tank_values[tank_name] += 1
+                if self.tank_values[tank_name] >= 100:
+                    self.tank_directions[tank_name] = False
             else:
-                self.progress_value -= 1
-                if self.progress_value <= 0:
-                    self.increasing = True  # Меняем направление
+                self.tank_values[tank_name] -= 1
+                if self.tank_values[tank_name] <= 0:
+                    self.tank_directions[tank_name] = True
 
-            self.ui.progressBar_rezervuar1.setValue(self.progress_value)
-            self.update_label()  # Обновляем label во время изменения
+            tank["progress"].setValue(self.tank_values[tank_name])
+            self.update_label(tank_name)
         else:
-            self.timer.stop()  # Если radioButton выключен, останавливаем таймер
+            tank["timer"].stop()
 
-    def update_label(self):
-        """Обновляет label_4 на основе значения progressBar, сохраняя fuel_type"""
-        
-        progress_value = self.ui.progressBar_rezervuar1.value()  # Получаем текущее значение
+    def update_label(self, tank_name):
+        """Обновляет label на основе значения progressBar"""
+        if tank_name not in self.tanks:
+            return  # Просто выходим, если tank_name не найден
+
+        tank = self.tanks[tank_name]
+        progress_value = tank["progress"].value()
 
         level_mm = int((progress_value * 2100) / 100)
         volume_liters = int((progress_value * 20000) / 100)
 
-        # Извлекаем текущий fuel_type из текста label_4
-        current_text = self.ui.label_4.text()
-        fuel_type = self.extract_fuel_type(current_text)
+        fuel_type = self.extract_fuel_type(tank["label"].text())
+        text_color = self.extract_text_color(tank["label"].text())  # Извлекаем цвет текста
 
-        self.ui.label_4.setText(f"""
+        tank["label"].setText(f"""
             <html><head/><body>
-                <p align="center"><span style=" font-weight:700; color:#000000;">{fuel_type}</span></p>
-                <p align="center"><span style=" font-weight:700; color:#000000;">------</span></p>
-                <p align="center"><span style=" font-weight:700; color:#000000;">{level_mm} мм</span></p>
-                <p align="center"><span style=" font-weight:700; color:#000000;">{volume_liters} л</span></p>
+                <p align="center"><span style=" font-weight:700; color:{text_color};">{fuel_type}</span></p>
+                <p align="center"><span style=" font-weight:700; color:{text_color};">------</span></p>
+                <p align="center"><span style=" font-weight:700; color:{text_color};">{level_mm} мм</span></p>
+                <p align="center"><span style=" font-weight:700; color:{text_color};">{volume_liters} л</span></p>
             </body></html>
         """)
 
-
     def extract_fuel_type(self, text):
-        """Извлекает fuel_type из HTML-разметки label_4"""
+        """Извлекает тип топлива из HTML-разметки label"""
         doc = QTextDocument()
         doc.setHtml(text)
-        plain_text = doc.toPlainText()  # Конвертируем HTML в обычный текст
-        lines = plain_text.split("\n")  # Разделяем по строкам
+        plain_text = doc.toPlainText()
+        lines = plain_text.split("\n")
 
-        if len(lines) > 0:
-            return lines[0].strip()  # Первая строка — это название топлива
-        return "Неизвестно"  # Если не удалось извлечь
+        return lines[0].strip() if lines else "Неизвестно"
+
+    def extract_text_color(self, text):
+        """Извлекает цвет текста из HTML-разметки label"""
+        # Используем регулярное выражение для поиска цвета
+        match = re.search(r'color:\s*(#[0-9a-fA-F]{6})', text)
+        if match:
+            return match.group(1)  # Возвращаем найденный цвет
+        return "#ffffff"  # Возвращаем белый цвет по умолчанию, если цвет не найден
     
         
     
