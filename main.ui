@@ -1980,7 +1980,7 @@ background-repeat: no-repeat;</string>
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>353</width>
+                                 <width>218</width>
                                  <height>218</height>
                                 </rect>
                                </property>
@@ -2696,10 +2696,10 @@ font: 900 16pt &quot;Segoe UI&quot;;
                                </rect>
                               </property>
                               <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Уровень, мм&lt;/p&gt;&lt;p&gt;Топливо к допуску, л&lt;/p&gt;&lt;p&gt;Топливо к приему, л&lt;/p&gt;&lt;p&gt;Плотность, кг/м3&lt;/p&gt;&lt;p&gt;Вода, мм&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Уровень, мм&lt;/p&gt;&lt;p&gt;Топливо к допуску, л&lt;/p&gt;&lt;p&gt;Топливо к приему, л&lt;/p&gt;&lt;p&gt;Плотность, кг/м3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                              </widget>
-                             <widget class="QLabel" name="label_3">
+                             <widget class="QLabel" name="table_label_dt">
                               <property name="geometry">
                                <rect>
                                 <x>300</x>
@@ -2709,7 +2709,7 @@ font: 900 16pt &quot;Segoe UI&quot;;
                                </rect>
                               </property>
                               <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;1&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;2&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;3&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;4&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;5&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;1&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;2&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;3&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;4&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                              </widget>
                             </widget>
@@ -3253,10 +3253,10 @@ font: 900 16pt &quot;Segoe UI&quot;;
                                </rect>
                               </property>
                               <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Уровень, мм&lt;/p&gt;&lt;p&gt;Топливо к допуску, л&lt;/p&gt;&lt;p&gt;Топливо к приему, л&lt;/p&gt;&lt;p&gt;Плотность, кг/м3&lt;/p&gt;&lt;p&gt;Вода, мм&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Уровень, мм&lt;/p&gt;&lt;p&gt;Топливо к допуску, л&lt;/p&gt;&lt;p&gt;Топливо к приему, л&lt;/p&gt;&lt;p&gt;Плотность, кг/м3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                              </widget>
-                             <widget class="QLabel" name="label_11">
+                             <widget class="QLabel" name="table_label_a80">
                               <property name="geometry">
                                <rect>
                                 <x>300</x>
@@ -3266,7 +3266,7 @@ font: 900 16pt &quot;Segoe UI&quot;;
                                </rect>
                               </property>
                               <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;1&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;2&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;3&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;4&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;5&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;1&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;2&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;3&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;4&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                              </widget>
                             </widget>
@@ -3459,10 +3459,10 @@ font: 900 16pt &quot;Segoe UI&quot;;
                                </rect>
                               </property>
                               <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Уровень, мм&lt;/p&gt;&lt;p&gt;Топливо к допуску, л&lt;/p&gt;&lt;p&gt;Топливо к приему, л&lt;/p&gt;&lt;p&gt;Плотность, кг/м3&lt;/p&gt;&lt;p&gt;Вода, мм&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Уровень, мм&lt;/p&gt;&lt;p&gt;Топливо к допуску, л&lt;/p&gt;&lt;p&gt;Топливо к приему, л&lt;/p&gt;&lt;p&gt;Плотность, кг/м3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                              </widget>
-                             <widget class="QLabel" name="label_6">
+                             <widget class="QLabel" name="table_label_ai92">
                               <property name="geometry">
                                <rect>
                                 <x>300</x>
@@ -3472,7 +3472,7 @@ font: 900 16pt &quot;Segoe UI&quot;;
                                </rect>
                               </property>
                               <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;1&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;2&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;3&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;4&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;5&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;1&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;2&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;3&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;4&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                              </widget>
                             </widget>
@@ -3652,10 +3652,10 @@ font: 900 16pt &quot;Segoe UI&quot;;
                                </rect>
                               </property>
                               <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Уровень, мм&lt;/p&gt;&lt;p&gt;Топливо к допуску, л&lt;/p&gt;&lt;p&gt;Топливо к приему, л&lt;/p&gt;&lt;p&gt;Плотность, кг/м3&lt;/p&gt;&lt;p&gt;Вода, мм&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Уровень, мм&lt;/p&gt;&lt;p&gt;Топливо к допуску, л&lt;/p&gt;&lt;p&gt;Топливо к приему, л&lt;/p&gt;&lt;p&gt;Плотность, кг/м3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                              </widget>
-                             <widget class="QLabel" name="label_8">
+                             <widget class="QLabel" name="table_label_ai95">
                               <property name="geometry">
                                <rect>
                                 <x>300</x>
@@ -3665,7 +3665,7 @@ font: 900 16pt &quot;Segoe UI&quot;;
                                </rect>
                               </property>
                               <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;1&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;2&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;3&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;4&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;5&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;1&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;2&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;3&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;4&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                              </widget>
                             </widget>
@@ -3845,10 +3845,10 @@ font: 900 16pt &quot;Segoe UI&quot;;
                                </rect>
                               </property>
                               <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Уровень, мм&lt;/p&gt;&lt;p&gt;Топливо к допуску, л&lt;/p&gt;&lt;p&gt;Топливо к приему, л&lt;/p&gt;&lt;p&gt;Плотность, кг/м3&lt;/p&gt;&lt;p&gt;Вода, мм&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Уровень, мм&lt;/p&gt;&lt;p&gt;Топливо к допуску, л&lt;/p&gt;&lt;p&gt;Топливо к приему, л&lt;/p&gt;&lt;p&gt;Плотность, кг/м3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                              </widget>
-                             <widget class="QLabel" name="label_10">
+                             <widget class="QLabel" name="table_label_ai98">
                               <property name="geometry">
                                <rect>
                                 <x>300</x>
@@ -3858,7 +3858,7 @@ font: 900 16pt &quot;Segoe UI&quot;;
                                </rect>
                               </property>
                               <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;1&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;2&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;3&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;4&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;5&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;1&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;2&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;3&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;4&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                              </widget>
                             </widget>

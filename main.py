@@ -98,7 +98,7 @@ class MainWindow(QMainWindow):
 
         self.ui.testradiobutton.toggled.connect(self.toggle_tanks)
         
-        self.scale_ui()
+
         
         
         # Переменные для хранения значений и направлений
@@ -120,6 +120,30 @@ class MainWindow(QMainWindow):
 
         self.tank_values = {key: 0 for key in self.tanks}
         self.tank_directions = {key: True for key in self.tanks} 
+        self.tanks["reservuar1"]["table_label"] = self.ui.table_label_dt  # Предположим, что это QLabel
+        self.tanks["reservuar2"]["table_label"] = self.ui.table_label_a80
+        self.tanks["reservuar3"]["table_label"] = self.ui.table_label_ai92
+        self.tanks["reservuar4"]["table_label"] = self.ui.table_label_ai95
+        self.tanks["reservuar5"]["table_label"] = self.ui.table_label_ai98
+
+    def extract_level_and_volume(self, text):
+        """Извлекает уровень (мм) и объем (л) из HTML-разметки label."""
+        doc = QTextDocument()
+        doc.setHtml(text)
+        plain_text = doc.toPlainText()
+        lines = plain_text.split("\n")
+
+        # Ищем строки с уровнем и объемом
+        level_mm = 0
+        volume_liters = 0
+
+        for line in lines:
+            if "мм" in line:
+                level_mm = int(re.sub(r"[^0-9]", "", line))  # Извлекаем число
+            elif "л" in line:
+                volume_liters = int(re.sub(r"[^0-9]", "", line))  # Извлекаем число
+
+        return level_mm, volume_liters
 
 
 
@@ -214,20 +238,50 @@ class MainWindow(QMainWindow):
         else:
             tank["timer"].stop()
 
+    def update_table_label(self, tank_name):
+        """Обновляет table_label_dt на основе данных из label_dt."""
+        if tank_name not in self.tanks:
+            return  # Просто выходим, если tank_name не найден
+
+        tank = self.tanks[tank_name]
+        current_text = tank["label"].text()
+
+        # Извлекаем данные из label_dt
+        level_mm, volume_liters = self.extract_level_and_volume(current_text)
+
+        # Формируем новый текст для table_label_dt
+        new_text = f"""
+            <html><head/><body>
+                <p align="right">{level_mm}</p>
+                <p align="right">{volume_liters}</p>
+                <p align="right">{20000-volume_liters}</p>  <!-- Пример дополнительной строки -->
+                <p align="right">4</p>  <!-- Пример дополнительной строки -->
+            </body></html>
+        """
+
+        # Обновляем table_label_dt
+        tank["table_label"].setText(new_text)
+
     def update_label(self, tank_name):
-        """Обновляет label на основе значения progressBar"""
+        """Обновляет label на основе значения progressBar."""
         if tank_name not in self.tanks:
             return  # Просто выходим, если tank_name не найден
 
         tank = self.tanks[tank_name]
         progress_value = tank["progress"].value()
 
-        level_mm = int((progress_value * 2100) / 100)
-        volume_liters = int((progress_value * 20000) / 100)
+        # Извлекаем текущие данные из label
+        current_text = tank["label"].text()
+        level_mm, volume_liters = self.extract_level_and_volume(current_text)
 
-        fuel_type = self.extract_fuel_type(tank["label"].text())
-        text_color = self.extract_text_color(tank["label"].text())  # Извлекаем цвет текста
+        # Обновляем уровень и объем на основе progress_value
+        level_mm = int((progress_value * 2100) / 100)  # Пример расчета уровня
+        volume_liters = int((progress_value * 20000) / 100)  # Пример расчета объема
 
+        fuel_type = self.extract_fuel_type(current_text)
+        text_color = self.extract_text_color(current_text)  # Извлекаем цвет текста
+
+        # Обновляем текст label
         tank["label"].setText(f"""
             <html><head/><body>
                 <p align="center"><span style=" font-weight:700; color:{text_color};">{fuel_type}</span></p>
@@ -236,6 +290,9 @@ class MainWindow(QMainWindow):
                 <p align="center"><span style=" font-weight:700; color:{text_color};">{volume_liters} л</span></p>
             </body></html>
         """)
+
+        # Обновляем table_label_dt
+        self.update_table_label(tank_name)
 
     def extract_fuel_type(self, text):
         """Извлекает тип топлива из HTML-разметки label"""
@@ -254,26 +311,7 @@ class MainWindow(QMainWindow):
             return match.group(1)  # Возвращаем найденный цвет
         return "#ffffff"  # Возвращаем белый цвет по умолчанию, если цвет не найден
     
-    def scale_ui(self):
-        screen = QApplication.primaryScreen()
-        screen_size = screen.size()  # Получаем размер экрана
-        
-        width = screen_size.width()
-        height = screen_size.height()
-        
-        # Устанавливаем размер окна пропорционально экрану
-        self.setGeometry(100, 100, int(width * 0.8), int(height * 0.8))  # 80% от экрана
-        self.setMinimumSize(int(width * 0.5), int(height * 0.5))  # Минимальный размер 50% от экрана
 
-        # Масштабируем шрифты
-        scale_factor = width / 1920  # Относительно FullHD
-        font = self.font()
-        font.setPointSize(int(10 * scale_factor))
-        self.setFont(font)
-
-        # Опционально: Увеличение элементов через QSS (если нужно)
-        self.setStyleSheet(f"QPushButton {{ font-size: {int(12 * scale_factor)}px; }}")
-    
         
     
     
