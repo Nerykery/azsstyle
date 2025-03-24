@@ -19,6 +19,7 @@ os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
 # ///////////////////////////////////////////////////////////////
 widgets = None
 
+
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -126,6 +127,8 @@ class MainWindow(QMainWindow):
         self.tanks["reservuar4"]["table_label"] = self.ui.table_label_ai95
         self.tanks["reservuar5"]["table_label"] = self.ui.table_label_ai98
 
+    
+
     def extract_level_and_volume(self, text):
         """Извлекает уровень (мм) и объем (л) из HTML-разметки label."""
         doc = QTextDocument()
@@ -144,6 +147,8 @@ class MainWindow(QMainWindow):
                 volume_liters = int(re.sub(r"[^0-9]", "", line))  # Извлекаем число
 
         return level_mm, volume_liters
+    
+    
 
 
 
