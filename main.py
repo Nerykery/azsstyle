@@ -13,7 +13,6 @@ import random
 # ///////////////////////////////////////////////////////////////
 from modules import *
 from widgets import *
-from customprogressbar import CustomProgressBar
 os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
 
 # SET AS GLOBAL WIDGETS
@@ -98,7 +97,8 @@ class MainWindow(QMainWindow):
 
 
         self.ui.testradiobutton.toggled.connect(self.toggle_tanks)
-
+        
+        self.scale_ui()
         
         
         # Переменные для хранения значений и направлений
@@ -253,6 +253,26 @@ class MainWindow(QMainWindow):
         if match:
             return match.group(1)  # Возвращаем найденный цвет
         return "#ffffff"  # Возвращаем белый цвет по умолчанию, если цвет не найден
+    
+    def scale_ui(self):
+        screen = QApplication.primaryScreen()
+        screen_size = screen.size()  # Получаем размер экрана
+        
+        width = screen_size.width()
+        height = screen_size.height()
+        
+        # Устанавливаем размер окна пропорционально экрану
+        self.setGeometry(100, 100, int(width * 0.8), int(height * 0.8))  # 80% от экрана
+        self.setMinimumSize(int(width * 0.5), int(height * 0.5))  # Минимальный размер 50% от экрана
+
+        # Масштабируем шрифты
+        scale_factor = width / 1920  # Относительно FullHD
+        font = self.font()
+        font.setPointSize(int(10 * scale_factor))
+        self.setFont(font)
+
+        # Опционально: Увеличение элементов через QSS (если нужно)
+        self.setStyleSheet(f"QPushButton {{ font-size: {int(12 * scale_factor)}px; }}")
     
         
     
