@@ -102,9 +102,7 @@ class MainWindow(QMainWindow):
 
         
         
-        # Переменные для хранения значений и направлений
-        
-          # True - увеличение, False - уменьшение
+
         self.tanks = {
             "reservuar1": {"progress": self.ui.progressBar_rezervuar1, "label": self.ui.label_dt, "timer": QTimer(self)},
             "reservuar2": {"progress": self.ui.progressBar_rezervuar2, "label": self.ui.label_a80, "timer": QTimer(self)},
@@ -121,7 +119,7 @@ class MainWindow(QMainWindow):
 
         self.tank_values = {key: 0 for key in self.tanks}
         self.tank_directions = {key: True for key in self.tanks} 
-        self.tanks["reservuar1"]["table_label"] = self.ui.table_label_dt  # Предположим, что это QLabel
+        self.tanks["reservuar1"]["table_label"] = self.ui.table_label_dt  
         self.tanks["reservuar2"]["table_label"] = self.ui.table_label_a80
         self.tanks["reservuar3"]["table_label"] = self.ui.table_label_ai92
         self.tanks["reservuar4"]["table_label"] = self.ui.table_label_ai95
@@ -136,15 +134,15 @@ class MainWindow(QMainWindow):
         plain_text = doc.toPlainText()
         lines = plain_text.split("\n")
 
-        # Ищем строки с уровнем и объемом
+
         level_mm = 0
         volume_liters = 0
 
         for line in lines:
             if "мм" in line:
-                level_mm = int(re.sub(r"[^0-9]", "", line))  # Извлекаем число
+                level_mm = int(re.sub(r"[^0-9]", "", line))  
             elif "л" in line:
-                volume_liters = int(re.sub(r"[^0-9]", "", line))  # Извлекаем число
+                volume_liters = int(re.sub(r"[^0-9]", "", line))  
 
         return level_mm, volume_liters
     
