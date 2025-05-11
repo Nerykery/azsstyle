@@ -1230,7 +1230,7 @@ if __name__ == "__main__":
     init_database()
     app.setWindowIcon(QIcon("icon.ico"))
     # Сначала показываем окно авторизации
-    auth_window = MainWindow()
+    auth_window = AuthWindow()
     auth_window.show()
     
     sys.exit(app.exec())
