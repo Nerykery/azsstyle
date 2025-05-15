@@ -205,7 +205,7 @@ class AuthWindow(QMainWindow):
             
             if result and verify_password(login, password):
                 role = result[0]
-                self.main_window = MainWindow(role=role)  # Создаем MainWindow с ролью
+                self.main_window = MainWindow(role=role, login=login)  # Передаем логин
                 self.main_window.show()
                 self.close()
             else:
@@ -217,7 +217,7 @@ class AuthWindow(QMainWindow):
                 conn.close()
         
 class MainWindow(QMainWindow):
-    def __init__(self, role='admin'):
+    def __init__(self, role='admin', login=''):
         super().__init__()  # Инициализируем QMainWindow
 
         # Инициализируем UI
@@ -225,10 +225,10 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)     # Настраиваем UI
 
         self.setup_user_creation()
-        self.setup_label_triggers()
         
         # Сохраняем роль пользователя
         self.role = role
+        self.current_user_login = login
         
 
 
@@ -370,6 +370,19 @@ class MainWindow(QMainWindow):
         self.ui.progressBar_rezervuar4.valueChanged.connect(lambda: self.update_label("reservuar4"))
         self.ui.progressBar_rezervuar5.valueChanged.connect(lambda: self.update_label("reservuar5"))
 
+        # Подключаем сигналы для расчета цены
+        self.ui.radioButton_dt.toggled.connect(self.calculate_price)
+        self.ui.radioButton_a80.toggled.connect(self.calculate_price)
+        self.ui.radioButton_ai92.toggled.connect(self.calculate_price)
+        self.ui.radioButton_ai95.toggled.connect(self.calculate_price)
+        self.ui.radioButton_98.toggled.connect(self.calculate_price)
+        
+        self.ui.litri_dt.textChanged.connect(self.calculate_price)
+        self.ui.litri_a80.textChanged.connect(self.calculate_price)
+        self.ui.litri_ai92.textChanged.connect(self.calculate_price)
+        self.ui.litri_ai95.textChanged.connect(self.calculate_price)
+        self.ui.litri_ai98.textChanged.connect(self.calculate_price)
+
 
         self.tank_values = {key: 0 for key in self.tanks}
         self.tank_directions = {key: True for key in self.tanks} 
@@ -378,7 +391,7 @@ class MainWindow(QMainWindow):
         self.tanks["reservuar3"]["table_label"] = self.ui.table_label_ai92
         self.tanks["reservuar4"]["table_label"] = self.ui.table_label_ai95
         self.tanks["reservuar5"]["table_label"] = self.ui.table_label_ai98
-        self.generate_test_data()
+        #self.generate_test_data()
         self.setup_logs_table()
         
 
@@ -386,6 +399,16 @@ class MainWindow(QMainWindow):
 
     #         widgets.btn_widgets.show() if self.role == 'admin' else widgets.btn_widgets.hide()
     #         widgets.btn_widgets.setVisible(False)  # Для принудительного скрытия
+        validator = QDoubleValidator()
+        validator.setNotation(QDoubleValidator.StandardNotation)
+        self.ui.kassa_oknovvoda.setValidator(validator)
+        self.ui.litri_a80.setValidator(validator)
+        self.ui.litri_ai92.setValidator(validator)
+        self.ui.litri_ai98.setValidator(validator)
+        self.ui.litri_dt.setValidator(validator)
+        self.ui.litri_ai95.setValidator(validator)
+
+
 
 
     
@@ -465,33 +488,33 @@ class MainWindow(QMainWindow):
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
 
         if btnName == "kassa_cifra00_button":
-            self.ui.kassa_oknovvoda.insertPlainText("00")
+            self.ui.kassa_oknovvoda.insert("00")
         if btnName == "kassa_cifra0_button":
-            self.ui.kassa_oknovvoda.insertPlainText("0")
+            self.ui.kassa_oknovvoda.insert("0")
         if btnName == "kassa_dot_button":
-            self.ui.kassa_oknovvoda.insertPlainText(".")
+            self.ui.kassa_oknovvoda.insert(".")
         if btnName == "kassa_enter_button":
             self.enter_pressed()
         if btnName == "kassa_clear_button":
             self.clear_display()
         if btnName == "kassa_cifra1_button":
-            self.ui.kassa_oknovvoda.insertPlainText("1")
+            self.ui.kassa_oknovvoda.insert("1")
         if btnName == "kassa_cifra2_button":
-            self.ui.kassa_oknovvoda.insertPlainText("2")
+            self.ui.kassa_oknovvoda.insert("2")
         if btnName == "kassa_cifra3_button":
-            self.ui.kassa_oknovvoda.insertPlainText("3")
+            self.ui.kassa_oknovvoda.insert("3")
         if btnName == "kassa_cifra4_button":
-            self.ui.kassa_oknovvoda.insertPlainText("4")
+            self.ui.kassa_oknovvoda.insert("4")
         if btnName == "kassa_cifra5_button":
-            self.ui.kassa_oknovvoda.insertPlainText("5")
+            self.ui.kassa_oknovvoda.insert("5")
         if btnName == "kassa_cifra6_button":
-            self.ui.kassa_oknovvoda.insertPlainText("6")
+            self.ui.kassa_oknovvoda.insert("6")
         if btnName == "kassa_cifra7_button":
-            self.ui.kassa_oknovvoda.insertPlainText("7")
+            self.ui.kassa_oknovvoda.insert("7")
         if btnName == "kassa_cifra8_button":
-            self.ui.kassa_oknovvoda.insertPlainText("8")
+            self.ui.kassa_oknovvoda.insert("8")
         if btnName == "kassa_cifra9_button":
-            self.ui.kassa_oknovvoda.insertPlainText("9")
+            self.ui.kassa_oknovvoda.insert("9")
         if btnName == "logs":
             widgets.stackedWidget.setCurrentWidget(widgets.logs_page) # SET PAGE
             UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
@@ -903,15 +926,13 @@ class MainWindow(QMainWindow):
             button_enter.clicked.connect(self.enter_pressed)
 
     def append_number(self, number):
-        current_text = self.display.toPlainText()
-        self.display.setPlainText(current_text + number)
+        current_text = self.display.setText()
+        self.display.setText(current_text + number)
 
     def clear_display(self):
         self.ui.kassa_oknovvoda.clear()
 
-    def enter_pressed(self):
-        current_text = self.ui.kassa_oknovvoda.toPlainText()
-        print(f"Введённое значение: {current_text}")
+
 
     
     
@@ -935,98 +956,12 @@ class MainWindow(QMainWindow):
             if conn:
                 conn.close()
 
-    def setup_label_triggers(self):
-        """Делает метки кликабельными и связывает их с чекбоксами"""
-        # Словарь {метка: (чекбокс, поле_для_литров)}
-        label_checkbox_pairs = {
-            self.ui.kassa_dt_label: (self.ui.checkBox_dt, self.ui.litri_dt),
-            self.ui.kassa_ai92_label: (self.ui.checkBox_ai92, self.ui.litri_ai92),
-            self.ui.kassa_ai95_label: (self.ui.checkBox_ai95, self.ui.litri_ai95),
-            self.ui.kassa_a80_label: (self.ui.checkBox_a80, self.ui.litri_a80),
-            self.ui.kassa_ai98_label: (self.ui.checkBox_ai98, self.ui.litri_ai98),
-        }
-        
-        for label, (checkbox, liters_input) in label_checkbox_pairs.items():
-            # Делаем курсор "рука" при наведении
-            label.setCursor(Qt.PointingHandCursor)
-            
-            # Обработка клика по метке
-            label.mousePressEvent = lambda event, cb=checkbox: self.toggle_checkbox(cb)
-            
-            
-            # Обработка изменения состояния чекбокса
-            checkbox.stateChanged.connect(lambda state, cb=checkbox, li=liters_input: self.handle_checkbox_change(state, cb, li))
 
-    def handle_checkbox_change(self, state, checkbox, liters_input):
-        """Обрабатывает изменение состояния чекбокса"""
-        fuel_type = ""
-        if checkbox == self.ui.checkBox_dt:
-            fuel_type = "ДТ"
-        elif checkbox == self.ui.checkBox_ai92:
-            fuel_type = "АИ-92"
-        elif checkbox == self.ui.checkBox_ai95:
-            fuel_type = "АИ-95"
-        elif checkbox == self.ui.checkBox_a80:
-            fuel_type = "А-80"
-        elif checkbox == self.ui.checkBox_ai98:
-            fuel_type = "АИ-98"
-        
-        print(f"Checkbox '{checkbox.objectName()}' state changed to: {state}")  # Отладка состояния чекбокса
-        if state == Qt.Checked:
-            try:
-                liters = float(liters_input.text())
-                print(f"Liters input: {liters}")  # Отладка введенного количества литров
-                price = self.get_fuel_price(fuel_type)
-                print(f"Price for {fuel_type}: {price}")  # Отладка цены топлива
-                total = liters * price
-                print(f"Total calculated: {total}")  # Отладка общей суммы
-                
-                # Добавляем сумму в окно ввода
-                current_text = self.ui.kassa_oknovvoda.toPlainText()
-                if current_text:
-                    current_text += " + "
-                self.ui.kassa_oknovvoda.setPlainText(current_text + str(round(total, 2)))
-                
-            except ValueError:
-                QMessageBox.warning(self, "Ошибка", "Введите корректное количество литров")
-                checkbox.setChecked(False)
-                print("Invalid liters input, checkbox unchecked.")  # Отладка некорректного ввода
-        else:
-            self.clear_fuel_calculation(fuel_type)
 
-    def get_fuel_price(self, fuel_type):
-        """Получает цену топлива из базы данных"""
-        try:
-            conn = sqlite3.connect('debug.db')
-            cursor = conn.cursor()
-            cursor.execute(
-                "SELECT price FROM fuel_prices WHERE fuel_type = ? ORDER BY valid_from DESC LIMIT 1",
-                (fuel_type,)
-            )
-            result = cursor.fetchone()
-            return result[0] if result else 0
-        except Exception as e:
-            print(f"Ошибка при получении цены топлива: {e}")
-            return 0
-        finally:
-            if conn:
-                conn.close()
 
-    def clear_fuel_calculation(self, fuel_type):
-        """Удаляет расчет для указанного типа топлива из окна ввода"""
-        current_text = self.ui.kassa_oknovvoda.toPlainText()
-        if not current_text:
-            return
-            
-        # Находим сумму для этого типа топлива в тексте
-        # (это упрощенная реализация, может потребоваться доработка)
-        pattern = r"\d+\.\d{2}"  # Ищем числа с двумя знаками после запятой
-        matches = re.findall(pattern, current_text)
-        
-        if matches:
-            # Удаляем последнее совпадение (самую свежую сумму)
-            new_text = current_text.rsplit(matches[-1], 1)[0].rstrip(" +")
-            self.ui.kassa_oknovvoda.setPlainText(new_text)
+
+
+
 
 
     def generate_test_data(self):
@@ -1213,6 +1148,177 @@ class MainWindow(QMainWindow):
         
         locker.setStyleSheet(new_style)
 
+
+    def calculate_price(self):
+        """Рассчитывает цену на основе выбранного топлива и введенных литров"""
+        fuel_types = {
+            "radioButton_dt": "ДТ",
+            "radioButton_a80": "А-80",
+            "radioButton_ai92": "АИ-92",
+            "radioButton_ai95": "АИ-95",
+            "radioButton_98": "АИ-98"
+        }
+        
+        # Находим выбранный radiobutton
+        selected_fuel = None
+        for radio_name, fuel_type in fuel_types.items():
+            radio = self.findChild(QRadioButton, radio_name)
+            if radio and radio.isChecked():
+                selected_fuel = fuel_type
+                break
+        
+        if not selected_fuel:
+            return
+        
+        # Получаем соответствующее поле ввода литров
+        liters_input = None
+        if selected_fuel == "ДТ":
+            liters_input = self.findChild(QLineEdit, "litri_dt")
+        elif selected_fuel == "А-80":
+            liters_input = self.findChild(QLineEdit, "litri_a80")
+        elif selected_fuel == "АИ-92":
+            liters_input = self.findChild(QLineEdit, "litri_ai92")
+        elif selected_fuel == "АИ-95":
+            liters_input = self.findChild(QLineEdit, "litri_ai95")
+        elif selected_fuel == "АИ-98":
+            liters_input = self.findChild(QLineEdit, "litri_ai98")
+        
+        if not liters_input:
+            return
+        
+        try:
+            liters = float(liters_input.text())
+            price_per_liter = self.get_fuel_price(selected_fuel)
+            total = liters * price_per_liter
+            
+            # Выводим результат в окно ввода
+            self.ui.kassa_oknovvoda.setText(f"{total:.2f} ₽")
+        except ValueError:
+            # Если введено не число
+            self.ui.kassa_oknovvoda.setText("")
+
+    def enter_pressed(self):
+        """Обработка нажатия кнопки Enter - запись операции в БД"""
+        try:
+            # Получаем сумму из окна ввода
+            amount_text = self.ui.kassa_oknovvoda.text().replace(' ₽', '').strip()
+            if not amount_text:
+                QMessageBox.warning(self, "Ошибка", "Введите сумму")
+                return
+                
+            try:
+                total_amount = float(amount_text)
+            except ValueError:
+                QMessageBox.warning(self, "Ошибка", "Некорректная сумма")
+                return
+            
+            # Определяем выбранное топливо
+            fuel_types = {
+                "radioButton_dt": "ДТ",
+                "radioButton_a80": "А-80",
+                "radioButton_ai92": "АИ-92",
+                "radioButton_ai95": "АИ-95",
+                "radioButton_98": "АИ-98"
+            }
+            
+            selected_fuel = None
+            for radio_name, fuel_type in fuel_types.items():
+                radio = self.findChild(QRadioButton, radio_name)
+                if radio and radio.isChecked():
+                    selected_fuel = fuel_type
+                    break
+            
+            if not selected_fuel:
+                QMessageBox.warning(self, "Ошибка", "Выберите тип топлива")
+                return
+            
+            # Получаем введенные литры
+            liters_input = None
+            if selected_fuel == "ДТ":
+                liters_input = self.findChild(QLineEdit, "litri_dt")
+            elif selected_fuel == "А-80":
+                liters_input = self.findChild(QLineEdit, "litri_a80")
+            elif selected_fuel == "АИ-92":
+                liters_input = self.findChild(QLineEdit, "litri_ai92")
+            elif selected_fuel == "АИ-95":
+                liters_input = self.findChild(QLineEdit, "litri_ai95")
+            elif selected_fuel == "АИ-98":
+                liters_input = self.findChild(QLineEdit, "litri_ai98")
+            
+            if not liters_input:
+                QMessageBox.warning(self, "Ошибка", "Не найдено поле ввода литров")
+                return
+            
+            try:
+                volume = float(liters_input.text())
+            except ValueError:
+                QMessageBox.warning(self, "Ошибка", "Некорректное количество литров")
+                return
+            
+            # Получаем текущего пользователя (для примера используем первого пользователя)
+            conn = sqlite3.connect('debug.db')
+            cursor = conn.cursor()
+            
+            # Получаем ID резервуара с выбранным топливом
+            cursor.execute("SELECT tank_id FROM tanks WHERE fuel_type = ?", (selected_fuel,))
+            tank_result = cursor.fetchone()
+            if not tank_result:
+                QMessageBox.warning(self, "Ошибка", "Не найден резервуар для выбранного топлива")
+                return
+            tank_id = tank_result[0]
+            
+            # Получаем ID текущего пользователя (здесь можно добавить логику получения реального пользователя)
+            cursor.execute("SELECT id FROM users WHERE login = ?", (self.current_user_login,))
+            user_result = cursor.fetchone()
+            if not user_result:
+                QMessageBox.warning(self, "Ошибка", "Не найден пользователь")
+                return
+            user_id = user_result[0]
+            
+            # Получаем текущую цену топлива
+            price_per_liter = self.get_fuel_price(selected_fuel)
+            
+            # Записываем операцию с топливом
+            cursor.execute(
+                "INSERT INTO fuel_transactions (tank_id, user_id, operation_type, volume, price_per_liter, total_amount, timestamp) "
+                "VALUES (?, ?, ?, ?, ?, ?, datetime('now'))",
+                (tank_id, user_id, 'продажа', volume, price_per_liter, total_amount)
+            )
+            
+            # Записываем операцию в кассу (доход)
+            cursor.execute(
+                "INSERT INTO cash_register (user_id, operation_type, amount, description, timestamp) "
+                "VALUES (?, ?, ?, ?, datetime('now'))",
+                (user_id, 'доход', total_amount, f"Продажа {selected_fuel} - {volume} л")
+            )
+            
+            # Обновляем уровень в резервуаре
+            cursor.execute(
+                "UPDATE tanks SET current_level = current_level - ?, last_update = datetime('now') WHERE tank_id = ?",
+                (volume, tank_id)
+            )
+            
+            conn.commit()
+            conn.close()
+            
+            # Обновляем данные на экране
+            self.load_tanks_data()
+            self.load_logs_data()
+            
+            # Очищаем поля
+            self.clear_display()
+            liters_input.clear()
+            for radio_name in fuel_types:
+                radio = self.findChild(QRadioButton, radio_name)
+                if radio:
+                    radio.setChecked(False)
+            
+            QMessageBox.information(self, "Успех", "Операция успешно записана")
+            
+        except Exception as e:
+            QMessageBox.critical(self, "Ошибка", f"Ошибка при записи операции: {str(e)}")
+            if 'conn' in locals():
+                conn.close()
 
 
 

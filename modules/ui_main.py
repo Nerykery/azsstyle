@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainruxXwz.ui'
+## Form generated from reading UI file 'mainbUkCWr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -15,12 +15,12 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QCheckBox,
-    QComboBox, QFrame, QGridLayout, QHBoxLayout,
-    QHeaderView, QLabel, QLineEdit, QMainWindow,
-    QProgressBar, QPushButton, QRadioButton, QSizePolicy,
-    QStackedWidget, QTableWidget, QTableWidgetItem, QTextEdit,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QComboBox,
+    QFrame, QGridLayout, QHBoxLayout, QHeaderView,
+    QLabel, QLineEdit, QMainWindow, QProgressBar,
+    QPushButton, QRadioButton, QSizePolicy, QStackedWidget,
+    QTableWidget, QTableWidgetItem, QTextEdit, QVBoxLayout,
+    QWidget)
 from . resources_rc import *
 
 class Ui_MainWindow(object):
@@ -2013,20 +2013,6 @@ class Ui_MainWindow(object):
 "QPushButton:pressed {\n"
 "    background-color: #1c6ea4;  /* \u0422\u0451\u043c\u043d\u043e-\u0441\u0438\u043d\u0438\u0439 \u043f\u0440\u0438 \u043d\u0430\u0436\u0430\u0442\u0438\u0438 */\n"
 "}")
-        self.kassa_oknovvoda = QTextEdit(self.kase_page)
-        self.kassa_oknovvoda.setObjectName(u"kassa_oknovvoda")
-        self.kassa_oknovvoda.setEnabled(True)
-        self.kassa_oknovvoda.setGeometry(QRect(640, 80, 491, 71))
-        self.kassa_oknovvoda.setStyleSheet(u"    color: white;\n"
-"    font-weight: bold;\n"
-"    font-size: 30px;\n"
-"    border: 2px solid #2980b9;\n"
-"    border-radius: 5px;\n"
-"    text-align: center;\n"
-"    display: flex;\n"
-"    justify-content: center;\n"
-"    align-items: center;\n"
-"    padding: 9px;")
         self.kassa_dt_label = QLabel(self.kase_page)
         self.kassa_dt_label.setObjectName(u"kassa_dt_label")
         self.kassa_dt_label.setGeometry(QRect(20, 70, 341, 81))
@@ -2092,171 +2078,6 @@ class Ui_MainWindow(object):
 "    justify-content: center;\n"
 "    align-items: center;\n"
 "    padding: 9px;")
-        self.checkBox_dt = QCheckBox(self.kase_page)
-        self.checkBox_dt.setObjectName(u"checkBox_dt")
-        self.checkBox_dt.setEnabled(True)
-        self.checkBox_dt.setGeometry(QRect(320, 95, 31, 30))
-        self.checkBox_dt.setStyleSheet(u"QCheckBox::indicator {\n"
-"    width: 21px;\n"
-"    height: 21px;\n"
-"    border: 1px solid #999999;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked {\n"
-"    background: #ff0000;  /* \u041a\u0440\u0430\u0441\u043d\u044b\u0439 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked:hover {\n"
-"    background: #ff6666;  /* \u0421\u0432\u0435\u0442\u043b\u043e-\u043a\u0440\u0430\u0441\u043d\u044b\u0439 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked {\n"
-"    background: #00ff00;  /* \u0417\u0435\u043b\u0435\u043d\u044b\u0439 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked:hover {\n"
-"    background: #66ff66;  /* \u0421\u0432\u0435\u0442\u043b\u043e-\u0437\u0435\u043b\u0435\u043d\u044b\u0439 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:disabled {\n"
-"    background: #cccccc;  /* \u0421\u0435\u0440\u044b\u0439 \u043f\u0440\u0438 \u043e\u0442\u043a\u043b\u044e"
-                        "\u0447\u0435\u043d\u043d\u043e\u043c \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0438 */\n"
-"}")
-        self.checkBox_dt.setChecked(False)
-        self.checkBox_dt.setTristate(False)
-        self.checkBox_ai92 = QCheckBox(self.kase_page)
-        self.checkBox_ai92.setObjectName(u"checkBox_ai92")
-        self.checkBox_ai92.setEnabled(True)
-        self.checkBox_ai92.setGeometry(QRect(320, 176, 31, 30))
-        self.checkBox_ai92.setStyleSheet(u"QCheckBox::indicator {\n"
-"    width: 21px;\n"
-"    height: 21px;\n"
-"    border: 1px solid #999999;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked {\n"
-"    background: #ff0000;  /* \u041a\u0440\u0430\u0441\u043d\u044b\u0439 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked:hover {\n"
-"    background: #ff6666;  /* \u0421\u0432\u0435\u0442\u043b\u043e-\u043a\u0440\u0430\u0441\u043d\u044b\u0439 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked {\n"
-"    background: #00ff00;  /* \u0417\u0435\u043b\u0435\u043d\u044b\u0439 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked:hover {\n"
-"    background: #66ff66;  /* \u0421\u0432\u0435\u0442\u043b\u043e-\u0437\u0435\u043b\u0435\u043d\u044b\u0439 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:disabled {\n"
-"    background: #cccccc;  /* \u0421\u0435\u0440\u044b\u0439 \u043f\u0440\u0438 \u043e\u0442\u043a\u043b\u044e"
-                        "\u0447\u0435\u043d\u043d\u043e\u043c \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0438 */\n"
-"}")
-        self.checkBox_ai92.setChecked(False)
-        self.checkBox_ai92.setTristate(False)
-        self.checkBox_ai95 = QCheckBox(self.kase_page)
-        self.checkBox_ai95.setObjectName(u"checkBox_ai95")
-        self.checkBox_ai95.setEnabled(True)
-        self.checkBox_ai95.setGeometry(QRect(320, 256, 31, 30))
-        self.checkBox_ai95.setStyleSheet(u"QCheckBox::indicator {\n"
-"    width: 21px;\n"
-"    height: 21px;\n"
-"    border: 1px solid #999999;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked {\n"
-"    background: #ff0000;  /* \u041a\u0440\u0430\u0441\u043d\u044b\u0439 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked:hover {\n"
-"    background: #ff6666;  /* \u0421\u0432\u0435\u0442\u043b\u043e-\u043a\u0440\u0430\u0441\u043d\u044b\u0439 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked {\n"
-"    background: #00ff00;  /* \u0417\u0435\u043b\u0435\u043d\u044b\u0439 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked:hover {\n"
-"    background: #66ff66;  /* \u0421\u0432\u0435\u0442\u043b\u043e-\u0437\u0435\u043b\u0435\u043d\u044b\u0439 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:disabled {\n"
-"    background: #cccccc;  /* \u0421\u0435\u0440\u044b\u0439 \u043f\u0440\u0438 \u043e\u0442\u043a\u043b\u044e"
-                        "\u0447\u0435\u043d\u043d\u043e\u043c \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0438 */\n"
-"}")
-        self.checkBox_ai95.setChecked(False)
-        self.checkBox_ai95.setTristate(False)
-        self.checkBox_a80 = QCheckBox(self.kase_page)
-        self.checkBox_a80.setObjectName(u"checkBox_a80")
-        self.checkBox_a80.setEnabled(True)
-        self.checkBox_a80.setGeometry(QRect(320, 335, 31, 30))
-        self.checkBox_a80.setStyleSheet(u"QCheckBox::indicator {\n"
-"    width: 21px;\n"
-"    height: 21px;\n"
-"    border: 1px solid #999999;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked {\n"
-"    background: #ff0000;  /* \u041a\u0440\u0430\u0441\u043d\u044b\u0439 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked:hover {\n"
-"    background: #ff6666;  /* \u0421\u0432\u0435\u0442\u043b\u043e-\u043a\u0440\u0430\u0441\u043d\u044b\u0439 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked {\n"
-"    background: #00ff00;  /* \u0417\u0435\u043b\u0435\u043d\u044b\u0439 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked:hover {\n"
-"    background: #66ff66;  /* \u0421\u0432\u0435\u0442\u043b\u043e-\u0437\u0435\u043b\u0435\u043d\u044b\u0439 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:disabled {\n"
-"    background: #cccccc;  /* \u0421\u0435\u0440\u044b\u0439 \u043f\u0440\u0438 \u043e\u0442\u043a\u043b\u044e"
-                        "\u0447\u0435\u043d\u043d\u043e\u043c \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0438 */\n"
-"}")
-        self.checkBox_a80.setChecked(False)
-        self.checkBox_a80.setTristate(False)
-        self.checkBox_ai98 = QCheckBox(self.kase_page)
-        self.checkBox_ai98.setObjectName(u"checkBox_ai98")
-        self.checkBox_ai98.setEnabled(True)
-        self.checkBox_ai98.setGeometry(QRect(320, 414, 31, 30))
-        self.checkBox_ai98.setStyleSheet(u"QCheckBox::indicator {\n"
-"    width: 21px;\n"
-"    height: 21px;\n"
-"    border: 1px solid #999999;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked {\n"
-"    background: #ff0000;  /* \u041a\u0440\u0430\u0441\u043d\u044b\u0439 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked:hover {\n"
-"    background: #ff6666;  /* \u0421\u0432\u0435\u0442\u043b\u043e-\u043a\u0440\u0430\u0441\u043d\u044b\u0439 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked {\n"
-"    background: #00ff00;  /* \u0417\u0435\u043b\u0435\u043d\u044b\u0439 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked:hover {\n"
-"    background: #66ff66;  /* \u0421\u0432\u0435\u0442\u043b\u043e-\u0437\u0435\u043b\u0435\u043d\u044b\u0439 \u043f\u0440\u0438 \u043d\u0430\u0432\u0435\u0434\u0435\u043d\u0438\u0438 */\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:disabled {\n"
-"    background: #cccccc;  /* \u0421\u0435\u0440\u044b\u0439 \u043f\u0440\u0438 \u043e\u0442\u043a\u043b\u044e"
-                        "\u0447\u0435\u043d\u043d\u043e\u043c \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0438 */\n"
-"}")
-        self.checkBox_ai98.setChecked(False)
-        self.checkBox_ai98.setTristate(False)
         self.litri_dt = QLineEdit(self.kase_page)
         self.litri_dt.setObjectName(u"litri_dt")
         self.litri_dt.setGeometry(QRect(150, 92, 151, 31))
@@ -2302,6 +2123,34 @@ class Ui_MainWindow(object):
         self.litri_ai98.setStyleSheet(u"    font-weight: bold;\n"
 "    font-size: 16px;\n"
 "")
+        self.radioButton_dt = QRadioButton(self.kase_page)
+        self.radioButton_dt.setObjectName(u"radioButton_dt")
+        self.radioButton_dt.setGeometry(QRect(320, 90, 21, 31))
+        self.radioButton_ai92 = QRadioButton(self.kase_page)
+        self.radioButton_ai92.setObjectName(u"radioButton_ai92")
+        self.radioButton_ai92.setGeometry(QRect(320, 180, 21, 31))
+        self.radioButton_ai95 = QRadioButton(self.kase_page)
+        self.radioButton_ai95.setObjectName(u"radioButton_ai95")
+        self.radioButton_ai95.setGeometry(QRect(320, 264, 21, 21))
+        self.radioButton_a80 = QRadioButton(self.kase_page)
+        self.radioButton_a80.setObjectName(u"radioButton_a80")
+        self.radioButton_a80.setGeometry(QRect(320, 340, 21, 31))
+        self.radioButton_98 = QRadioButton(self.kase_page)
+        self.radioButton_98.setObjectName(u"radioButton_98")
+        self.radioButton_98.setGeometry(QRect(321, 413, 21, 31))
+        self.kassa_oknovvoda = QLineEdit(self.kase_page)
+        self.kassa_oknovvoda.setObjectName(u"kassa_oknovvoda")
+        self.kassa_oknovvoda.setGeometry(QRect(640, 80, 491, 71))
+        self.kassa_oknovvoda.setStyleSheet(u"    color: white;\n"
+"    font-weight: bold;\n"
+"    font-size: 30px;\n"
+"    border: 2px solid #2980b9;\n"
+"    border-radius: 5px;\n"
+"    text-align: center;\n"
+"    display: flex;\n"
+"    justify-content: center;\n"
+"    align-items: center;\n"
+"    padding: 9px;")
         self.stackedWidget.addWidget(self.kase_page)
         self.logs_page = QWidget()
         self.logs_page.setObjectName(u"logs_page")
@@ -2537,7 +2386,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2572,19 +2421,19 @@ class Ui_MainWindow(object):
                         "y</span></p></body></html>", None))
         self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"AZS style", None))
 #if QT_CONFIG(tooltip)
-        self.settingsTopBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Settings", None))
+        self.settingsTopBtn.setToolTip(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", None))
 #endif // QT_CONFIG(tooltip)
         self.settingsTopBtn.setText("")
 #if QT_CONFIG(tooltip)
-        self.minimizeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Minimize", None))
+        self.minimizeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"\u0421\u0432\u0435\u0440\u043d\u0443\u0442\u044c", None))
 #endif // QT_CONFIG(tooltip)
         self.minimizeAppBtn.setText("")
 #if QT_CONFIG(tooltip)
-        self.maximizeRestoreAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Maximize", None))
+        self.maximizeRestoreAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u043b\u043d\u044b\u0439 \u044d\u043a\u0440\u0430\u043d", None))
 #endif // QT_CONFIG(tooltip)
         self.maximizeRestoreAppBtn.setText("")
 #if QT_CONFIG(tooltip)
-        self.closeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close", None))
+        self.closeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u043a\u0440\u044b\u0442\u044c", None))
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u041b\u043e\u0433\u0438\u043d", None))
@@ -2689,24 +2538,11 @@ class Ui_MainWindow(object):
         self.kassa_cifra00_button.setText(QCoreApplication.translate("MainWindow", u"00", None))
         self.kassa_enter_button.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0412\u041e\u0414", None))
         self.kassa_clear_button.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0411\u0420\u041e\u0421", None))
-        self.kassa_oknovvoda.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:30px; font-weight:700; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.kassa_dt_label.setText(QCoreApplication.translate("MainWindow", u"\u0414\u0422", None))
         self.kassa_ai92_label.setText(QCoreApplication.translate("MainWindow", u"\u0410\u0418-92", None))
         self.kassa_ai95_label.setText(QCoreApplication.translate("MainWindow", u"\u0410\u0418-95", None))
         self.kassa_a80_label.setText(QCoreApplication.translate("MainWindow", u"\u0410-80", None))
         self.kassa_ai98_label.setText(QCoreApplication.translate("MainWindow", u"\u0410\u0418-98", None))
-        self.checkBox_dt.setText("")
-        self.checkBox_ai92.setText("")
-        self.checkBox_ai95.setText("")
-        self.checkBox_a80.setText("")
-        self.checkBox_ai98.setText("")
         self.litri_dt.setText("")
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">\u043b</span></p></body></html>", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">\u043b</span></p></body></html>", None))
@@ -2717,6 +2553,11 @@ class Ui_MainWindow(object):
         self.litri_a80.setText("")
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:16pt;\">\u043b</span></p></body></html>", None))
         self.litri_ai98.setText("")
+        self.radioButton_dt.setText("")
+        self.radioButton_ai92.setText("")
+        self.radioButton_ai95.setText("")
+        self.radioButton_a80.setText("")
+        self.radioButton_98.setText("")
         ___qtablewidgetitem24 = self.table_logs.horizontalHeaderItem(0)
         ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"0", None));
         ___qtablewidgetitem25 = self.table_logs.horizontalHeaderItem(1)

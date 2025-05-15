@@ -1458,13 +1458,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="toolTip">
-                   <string>Settings</string>
+                   <string>Настройки</string>
                   </property>
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset>
                     <normaloff>:/icons/images/icons/icon_settings.png</normaloff>:/icons/images/icons/icon_settings.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -1493,13 +1493,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="toolTip">
-                   <string>Minimize</string>
+                   <string>Свернуть</string>
                   </property>
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset>
                     <normaloff>:/icons/images/icons/icon_minimize.png</normaloff>:/icons/images/icons/icon_minimize.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -1537,13 +1537,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="toolTip">
-                   <string>Maximize</string>
+                   <string>Полный экран</string>
                   </property>
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset>
                     <normaloff>:/icons/images/icons/icon_maximize.png</normaloff>:/icons/images/icons/icon_maximize.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -1572,13 +1572,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="toolTip">
-                   <string>Close</string>
+                   <string>Закрыть</string>
                   </property>
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset>
                     <normaloff>:/icons/images/icons/icon_close.png</normaloff>:/icons/images/icons/icon_close.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -1676,7 +1676,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>2</number>
+                      <number>3</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="styleSheet">
@@ -4306,41 +4306,6 @@ QPushButton:pressed {
                         <string>СБРОС</string>
                        </property>
                       </widget>
-                      <widget class="QTextEdit" name="kassa_oknovvoda">
-                       <property name="enabled">
-                        <bool>true</bool>
-                       </property>
-                       <property name="geometry">
-                        <rect>
-                         <x>640</x>
-                         <y>80</y>
-                         <width>491</width>
-                         <height>71</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">    color: white;
-    font-weight: bold;
-    font-size: 30px;
-    border: 2px solid #2980b9;
-    border-radius: 5px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 9px;</string>
-                       </property>
-                       <property name="html">
-                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:30px; font-weight:700; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                       </property>
-                      </widget>
                       <widget class="QLabel" name="kassa_dt_label">
                        <property name="geometry">
                         <rect>
@@ -4464,256 +4429,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
                        </property>
                        <property name="text">
                         <string>АИ-98</string>
-                       </property>
-                      </widget>
-                      <widget class="QCheckBox" name="checkBox_dt">
-                       <property name="enabled">
-                        <bool>true</bool>
-                       </property>
-                       <property name="geometry">
-                        <rect>
-                         <x>320</x>
-                         <y>95</y>
-                         <width>31</width>
-                         <height>30</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">QCheckBox::indicator {
-    width: 21px;
-    height: 21px;
-    border: 1px solid #999999;
-    border-radius: 3px;
-}
-
-QCheckBox::indicator:unchecked {
-    background: #ff0000;  /* Красный */
-}
-
-QCheckBox::indicator:unchecked:hover {
-    background: #ff6666;  /* Светло-красный при наведении */
-}
-
-QCheckBox::indicator:checked {
-    background: #00ff00;  /* Зеленый */
-}
-
-QCheckBox::indicator:checked:hover {
-    background: #66ff66;  /* Светло-зеленый при наведении */
-}
-
-QCheckBox::indicator:disabled {
-    background: #cccccc;  /* Серый при отключенном состоянии */
-}</string>
-                       </property>
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="checked">
-                        <bool>false</bool>
-                       </property>
-                       <property name="tristate">
-                        <bool>false</bool>
-                       </property>
-                      </widget>
-                      <widget class="QCheckBox" name="checkBox_ai92">
-                       <property name="enabled">
-                        <bool>true</bool>
-                       </property>
-                       <property name="geometry">
-                        <rect>
-                         <x>320</x>
-                         <y>176</y>
-                         <width>31</width>
-                         <height>30</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">QCheckBox::indicator {
-    width: 21px;
-    height: 21px;
-    border: 1px solid #999999;
-    border-radius: 3px;
-}
-
-QCheckBox::indicator:unchecked {
-    background: #ff0000;  /* Красный */
-}
-
-QCheckBox::indicator:unchecked:hover {
-    background: #ff6666;  /* Светло-красный при наведении */
-}
-
-QCheckBox::indicator:checked {
-    background: #00ff00;  /* Зеленый */
-}
-
-QCheckBox::indicator:checked:hover {
-    background: #66ff66;  /* Светло-зеленый при наведении */
-}
-
-QCheckBox::indicator:disabled {
-    background: #cccccc;  /* Серый при отключенном состоянии */
-}</string>
-                       </property>
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="checked">
-                        <bool>false</bool>
-                       </property>
-                       <property name="tristate">
-                        <bool>false</bool>
-                       </property>
-                      </widget>
-                      <widget class="QCheckBox" name="checkBox_ai95">
-                       <property name="enabled">
-                        <bool>true</bool>
-                       </property>
-                       <property name="geometry">
-                        <rect>
-                         <x>320</x>
-                         <y>256</y>
-                         <width>31</width>
-                         <height>30</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">QCheckBox::indicator {
-    width: 21px;
-    height: 21px;
-    border: 1px solid #999999;
-    border-radius: 3px;
-}
-
-QCheckBox::indicator:unchecked {
-    background: #ff0000;  /* Красный */
-}
-
-QCheckBox::indicator:unchecked:hover {
-    background: #ff6666;  /* Светло-красный при наведении */
-}
-
-QCheckBox::indicator:checked {
-    background: #00ff00;  /* Зеленый */
-}
-
-QCheckBox::indicator:checked:hover {
-    background: #66ff66;  /* Светло-зеленый при наведении */
-}
-
-QCheckBox::indicator:disabled {
-    background: #cccccc;  /* Серый при отключенном состоянии */
-}</string>
-                       </property>
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="checked">
-                        <bool>false</bool>
-                       </property>
-                       <property name="tristate">
-                        <bool>false</bool>
-                       </property>
-                      </widget>
-                      <widget class="QCheckBox" name="checkBox_a80">
-                       <property name="enabled">
-                        <bool>true</bool>
-                       </property>
-                       <property name="geometry">
-                        <rect>
-                         <x>320</x>
-                         <y>335</y>
-                         <width>31</width>
-                         <height>30</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">QCheckBox::indicator {
-    width: 21px;
-    height: 21px;
-    border: 1px solid #999999;
-    border-radius: 3px;
-}
-
-QCheckBox::indicator:unchecked {
-    background: #ff0000;  /* Красный */
-}
-
-QCheckBox::indicator:unchecked:hover {
-    background: #ff6666;  /* Светло-красный при наведении */
-}
-
-QCheckBox::indicator:checked {
-    background: #00ff00;  /* Зеленый */
-}
-
-QCheckBox::indicator:checked:hover {
-    background: #66ff66;  /* Светло-зеленый при наведении */
-}
-
-QCheckBox::indicator:disabled {
-    background: #cccccc;  /* Серый при отключенном состоянии */
-}</string>
-                       </property>
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="checked">
-                        <bool>false</bool>
-                       </property>
-                       <property name="tristate">
-                        <bool>false</bool>
-                       </property>
-                      </widget>
-                      <widget class="QCheckBox" name="checkBox_ai98">
-                       <property name="enabled">
-                        <bool>true</bool>
-                       </property>
-                       <property name="geometry">
-                        <rect>
-                         <x>320</x>
-                         <y>414</y>
-                         <width>31</width>
-                         <height>30</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">QCheckBox::indicator {
-    width: 21px;
-    height: 21px;
-    border: 1px solid #999999;
-    border-radius: 3px;
-}
-
-QCheckBox::indicator:unchecked {
-    background: #ff0000;  /* Красный */
-}
-
-QCheckBox::indicator:unchecked:hover {
-    background: #ff6666;  /* Светло-красный при наведении */
-}
-
-QCheckBox::indicator:checked {
-    background: #00ff00;  /* Зеленый */
-}
-
-QCheckBox::indicator:checked:hover {
-    background: #66ff66;  /* Светло-зеленый при наведении */
-}
-
-QCheckBox::indicator:disabled {
-    background: #cccccc;  /* Серый при отключенном состоянии */
-}</string>
-                       </property>
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="checked">
-                        <bool>false</bool>
-                       </property>
-                       <property name="tristate">
-                        <bool>false</bool>
                        </property>
                       </widget>
                       <widget class="QLineEdit" name="litri_dt">
@@ -4869,6 +4584,93 @@ QCheckBox::indicator:disabled {
                        </property>
                        <property name="text">
                         <string/>
+                       </property>
+                      </widget>
+                      <widget class="QRadioButton" name="radioButton_dt">
+                       <property name="geometry">
+                        <rect>
+                         <x>320</x>
+                         <y>90</y>
+                         <width>21</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QRadioButton" name="radioButton_ai92">
+                       <property name="geometry">
+                        <rect>
+                         <x>320</x>
+                         <y>180</y>
+                         <width>21</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QRadioButton" name="radioButton_ai95">
+                       <property name="geometry">
+                        <rect>
+                         <x>320</x>
+                         <y>264</y>
+                         <width>21</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QRadioButton" name="radioButton_a80">
+                       <property name="geometry">
+                        <rect>
+                         <x>320</x>
+                         <y>340</y>
+                         <width>21</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QRadioButton" name="radioButton_98">
+                       <property name="geometry">
+                        <rect>
+                         <x>321</x>
+                         <y>413</y>
+                         <width>21</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLineEdit" name="kassa_oknovvoda">
+                       <property name="geometry">
+                        <rect>
+                         <x>640</x>
+                         <y>80</y>
+                         <width>491</width>
+                         <height>71</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;</string>
                        </property>
                       </widget>
                      </widget>
